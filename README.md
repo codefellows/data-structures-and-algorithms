@@ -5,7 +5,7 @@
 1. Create a new repository in your GitHub account called `data-structures-and-algorithms`
 1. Clone the empty repository to your machine
 1. Choose the "Download" option under "Clone or Download" for this repository
-1. Copy that .zip file inside of your local `data-structures-and-algorithms` repo from step 2
+1. Copy that .zip file inside of the local `data-structures-and-algorithms` repo created in step 2
 1. Unzip the file there
 1. Remove the .zip file
 1. Run the command `npm install` from the repository root directory
