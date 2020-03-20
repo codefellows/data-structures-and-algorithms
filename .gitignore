@@ -4,6 +4,12 @@ db
 temp
 build
 
+# 401 Python
+.venv
+__pycache__
+.pytest_cache
+.vscode
+
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
 *~

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "data-structures-and-algorithms"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pytest-watch = "^4.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = {version = "^19.10b0", allow-prereleases = true}
+pytest-cov = "^2.8.1"
+pytest-xdist = "^1.31.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

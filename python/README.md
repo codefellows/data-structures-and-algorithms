@@ -1,5 +1,3 @@
-# Data Structures and Algorithms
+# data-structures-and-algorithms
+401 Python Data Structures and Algorithms
 
-## Language: `Python`
-
-What should go here?
