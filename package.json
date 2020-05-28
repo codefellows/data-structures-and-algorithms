@@ -4,13 +4,14 @@
   "description": "Data Structures, Algorithms, Code Challenges",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "lint": "eslint '**/*.js'"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "jest": "^25.1.0"
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1"
   }
 }
