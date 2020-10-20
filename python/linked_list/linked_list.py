@@ -4,11 +4,9 @@ class LinkedList:
     """
 
     def __init__(self):
-      # initialization here
-      pass
+        # initialization here
+        pass
 
     def some_method(self):
-      # method body here
-      pass
-
-    
+        # method body here
+        pass

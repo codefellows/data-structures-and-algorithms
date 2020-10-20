@@ -20,12 +20,12 @@ Each type of code challenge has slightly different instructions. Please refer to
       def __init__(self):
         # ... initialization code
 
-      method_name():
+      def method_name(self):
         # method body
     ```
 
 - Tests
-  - Within folder `tests` create a test file called `test_[data-structure].py`
+  - Within folder `tests` create a test file called `test_[data_structure].py`
     - i.e. `tests/test_linked_list.py`
     - Your tests will then need to require the data structure you're testing
       - i.e. `from linked_list.linked_list import LinkedList`
@@ -36,7 +36,7 @@ Each type of code challenge has slightly different instructions. Please refer to
 - Create a new method within the class that solves the code challenge
   - Remember, you'll have access to `self` within your class methods
 - Tests
-  - You will have folder named `tests` and within it, a test file called `test_[data-structure].py`
+  - You will have folder named `tests` and within it, a test file called `test_[data_structure].py`
     - i.e. `tests/test_linked_list.py`
     - Add to the tests written for this data structure to cover your new method(s)
 
@@ -51,7 +51,7 @@ Code challenges should be completed within a folder named `code_challenges` unde
     - i.e. For a challenge named 'find_maximum_value', create the folder:`code_challenges/find_maximum_value`
   - Code Challenge Implementation
     - Each code challenge requires a function be written, for example "find maximum value"
-    - Name the actual challenge file with the name of the challenge, in `snake-case`
+    - Name the actual challenge file with the name of the challenge, in `snake_case`
       - i.e. `find_maximum_value.py`
     - Reminder: Your challenge file will then need to require the data structure you're using to implement
       - i.e. `from linked_list.linked_list import LinkedList`
@@ -72,5 +72,5 @@ If you setup your folders according to the above guidelines, running tests becom
 From the root of the `data-structures-and-algorithms/python` folder, execute the following commands:
 
 - **Run every possible test** - `pytest`
-- **Run filtered tests** - `pytest -k some_filter_text
+- **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`

@@ -1,4 +1,3 @@
-
 def reverse_list(ll):
     """Reverses a linked list
     Args:
