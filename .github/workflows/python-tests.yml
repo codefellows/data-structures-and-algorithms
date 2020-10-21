@@ -23,7 +23,9 @@ jobs:
         run: poetry --help
       - name: Install dependencies
         run: poetry install
+        working-directory: ./python
 
       - name: Run pytest
         shell: bash
-        run: python -m poetry run python -m pytest -v python/tests
+        run: python -m poetry run python -m pytest -v tests
+        working-directory: ./python
