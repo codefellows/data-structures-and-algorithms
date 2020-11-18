@@ -77,8 +77,8 @@ If you setup your folders according to the above guidelines, running tests becom
 From the root of the `data-structures-and-algorithms` folder, execute the following commands:
 
 - **Run every possible test** - `npm test`
-- **Run a test for a data structure - `npm test linked-list`
-- **Run a test for a specific challenge - `npm test reverse-ll`
+- **Run a test for a data structure** - `npm test linked-list`
+- **Run a test for a specific challenge** - `npm test reverse-ll`
 
 #### Live Tests
 
