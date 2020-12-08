@@ -54,3 +54,9 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+#### challenge 01: array-reverse
+[array-reverse](./python/code_challenges/array_reverse)
+
+***Pair-Program whiteboard w/ @sean Hawkins
+![WhiteBoard](./python/code_challenges/assets/array-reverse.jpg)
