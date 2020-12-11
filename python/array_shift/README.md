@@ -13,7 +13,7 @@ I searched the web, used the test driven development tools with pytest and figur
 
 ## Solution
 <!-- Embedded whiteboard image -->
-[Link to whiteboard image](assets/CodeChallegeA_B.png)
+[Link to whiteboard image](../assets/CodeChallegeA_B.png)
 
 ## Link to pull request
 https://github.com/PyDrummer/data-structures-and-algorithms/compare/master...PyDrummer:array-shift?expand=1
