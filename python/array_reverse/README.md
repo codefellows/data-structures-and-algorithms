@@ -13,4 +13,4 @@ Our approach was to first whiteboard and make a plan of attack. The next steps w
 
 ## Solution
 <!-- Embedded whiteboard image -->
-[Link to whiteboard image](assets/array-reverse.jpg)
+[Link to whiteboard image](../assets/array-reverse.jpg)
