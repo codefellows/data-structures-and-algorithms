@@ -74,3 +74,9 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 - **Run every possible test** - `pytest`
 - **Run filtered tests** - `pytest -k some_filter_text`
 - **Run in watch mode** - `ptw` or `pytest-watch`
+
+
+## Challenges Index
+
+[Challenge 02 w/ Amber Falboe](code_challenges/array_shift)
+*whiteboard image will not copy to project*
