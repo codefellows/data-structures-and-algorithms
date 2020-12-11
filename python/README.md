@@ -90,5 +90,20 @@ Our approach was to first whiteboard and make a plan of attack. The next steps w
 
 ## Solution
 <!-- Embedded whiteboard image -->
-***Whiteboard Image***
 [Link to whiteboard image](assets/array-reverse.jpg)
+
+# ArrayShift
+<!-- Short summary or background information -->
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+
+## Challenge
+<!-- Description of the challenge -->
+To make the function input a number into the array in the middle of that array.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I searched the web, used the test driven development tools with pytest and figured out a solution.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Link to whiteboard image](assets/CodeChallegeA_B.png)
