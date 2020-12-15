@@ -79,4 +79,6 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ## Challenges Index
 
 [Challenge 02 w/ Amber Falboe](code_challenges/array_shift)
-*whiteboard image will not copy to project*
+full whiteboard including pseudo code done in paint and png file shared with Amber Falbo. actual coding took about an hour largely due to technical issues. the code in the whiteboard was almost correct but had syntax errors that were corrected when entered in editor. 
+
+*whiteboard image will not copy to project ERROR: unable to resolve non-existing file \<path\>*
