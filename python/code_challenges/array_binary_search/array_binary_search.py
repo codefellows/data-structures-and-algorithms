@@ -17,20 +17,20 @@ def search_by_iterator(array: list, term: int) -> int :
   
   
 def find_mid_list(array: list) -> int:
-  return array[round(len(array)/2)]
+  return array[len(array) // 2]
 
 def array_binary_search(array: list, term: int) -> int:
-  
-  
-  while len(array) >= 0:
-    if term > find_mid_list(array):
-      array = array[find_mid_list(array) : len(array)]
-    elif term < find_mid_list(array):
-      array = array[0 : find_mid_list(array)]
-    elif term == find_mid_list(array):
-      return array.index(term)
-    else:
-      return -1
+  mid = find_mid_list(array)
+  if len(array) < 1 :
+    return -1
+  elif term == mid :
+    return array.index(term)
+  elif term > mid:
+    array = array[mid:]
+    array_binary_search(array, term)
+  else: 
+    array = array[:mid]
+    array_binary_search(array, term)
 
 
 
