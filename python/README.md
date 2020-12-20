@@ -77,6 +77,12 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 # Table of Contents
 (Read me files have been moved to the correct places)
+
 [Link to Array-reverse](array_reverse/README.md)
+
 [Link to Array-Shift](array_shift/README.md)
+
 [Link to Array_Binary_Search](array_binary_search/README.md)
+
+[Link to Linked_List](linked_list/README.md)
+
