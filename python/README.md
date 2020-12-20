@@ -80,3 +80,5 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 [Challenge 02 w/ Amber Falboe](code_challenges/array_shift)
 *whiteboard image will not copy to project*
+
+[Challenge 05: Linked_List Implementation](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/4)
