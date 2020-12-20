@@ -21,3 +21,6 @@ First we collaborated on the whiteboard. Next we searched the web for examples.
 
 ## Collaboration
 Alex, Nebiyu & Karlo
+
+## Link:
+[Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/tree/master/python/linked_list)
