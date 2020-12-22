@@ -6,12 +6,12 @@ def test_import():
 link = LinkedList()
 
 def test_empty_list():
-    actual = link.insert_node(Node(None))
+    actual = link.insert_node(None)
     value = None
     assert actual == value
 
 def test_insert_list():
-    actual = link.insert_node(Node(4))
+    actual = link.insert_node(4)
     value = None
     assert actual == value
 
@@ -23,9 +23,9 @@ def test_head_link():
 new_link = LinkedList()
 
 def test_multiple_insert():
-    new_link.insert_node(Node(3))
-    new_link.insert_node(Node(6))
-    new_link.insert_node(Node(10))
+    new_link.insert_node(3)
+    new_link.insert_node(6)
+    new_link.insert_node(10)
     actual = str(new_link)
     value = '{10} -> {6} -> {3} -> Null'
     assert actual == value
