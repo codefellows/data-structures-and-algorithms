@@ -58,13 +58,29 @@ class LinkedList:
         if current is None:
             self.insert_node(new_node)
             return
+    
         while current.next is not None:
             if current.next.value == value:
                 new_node.next = current.next
                 current.next = new_node
             current = current.next
             return
+    
+    def insert_after(self, value, new_value):
+        new_node = Node(new_value)
+        current = self.head
 
+        if current is None:
+            self.insert_node(new_node)
+            return
+        
+        while current is not None:
+            if current.value == value:
+                new_node.next = current.next
+                current.next = new_node
+            current = current.next
+            # return
+            
     def __str__(self):
         # temp = self.head
         # node_list = [] 
@@ -94,10 +110,13 @@ class LinkedList:
 
         # insert after(value, newval) same as insert before but just after the value node.
 
-# if __name__ == '__main__':
-#     new_node = Node(1)
-#     link = LinkedList()
-#     link.insert_node(1)
-#     link.append(10)
-#     print(link)
+if __name__ == '__main__':
+    new_node = Node(1)
+    link = LinkedList()
+    link.insert_node(1)
+    link.append(10)
+    link.append(11)
+    link.insert_after(11, 5)
+    link.insert_node(3)
+    print(link)
     

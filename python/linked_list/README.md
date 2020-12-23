@@ -24,3 +24,27 @@ Alex, Nebiyu & Karlo
 
 ## Link:
 [Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/tree/master/python/linked_list)
+
+# Linked List Challenge 06
+<!-- Short summary or background information -->
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Challenge
+<!-- Description of the challenge -->
+To get all tests to pass and classes to work correctly.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+First we collaborated on the whiteboard. Next we searched the web for examples.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Link to whiteboard image](../assets/CodeChallenge06.png)
+
+## Collaboration
+Audrena, Robert, Amber & Kim
+
+## Link:
+[Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/tree/master/python/linked_list)
