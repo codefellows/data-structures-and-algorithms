@@ -73,8 +73,53 @@ class LinkedList:
         console_log = ' '.join(once_and_future_string)
         return console_log
                
+    def append(self, value):
+        """ adds the value passed as an argument to the end of the linked list. non-fruitful function. 
+
+        input <-- int
+        Output --> none (appends to list may be considered an implied return however)
+
+        Space: O(1)
+        Time: O(N)
+        """
+        node = Node(value)
+        if self.head == None:
+            self.head == node
             
-                
+        else:
+            current = self.head
+
+            while current.next is not None:
+                if current.next == None:
+                    current.next = node
+                    break
+
+            current = current.next
+        
+        
+    
+    def insert_before(self, val, new_val):
+        node = Node(new_val)
+        current = self.head
+        
+        if current.next == None:
+            self.head = node
+            
+        while current is not None:
+
+            if current.next.value == val:
+                node.next = current.next 
+                current.next = node
+                break
+            else:
+                current = current.next 
+
+
+    
+
+
+
+
 
 class Node:
     """ Constructs Nodes with values and a reference to next for use with LinkedList
@@ -92,10 +137,15 @@ class Node:
 
 
 if __name__ == "__main__":
-    finding_francis = LinkedList('goons')
-    finding_francis.insert('meat-head')
-    finding_francis.insert('brown-pants')
-    finding_francis.insert('car-goon')
+    finding_francis = LinkedList()
+    print("on instantiation", finding_francis.head.value)
+    finding_francis.append('brown-pants')
+    print('post append', finding_francis.head.next)
+    print('post append str', finding_francis.__str__())
 
-    finding_francis.includes('goons')
+
+
+   
+    
+    # finding_francis.insert_before('goons', 'meat-head')
     
