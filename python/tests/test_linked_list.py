@@ -79,10 +79,52 @@ def test_str_of_llist_class():
     assert actual == expected
 
 
+def test_append():
+    finding_francis = LinkedList('goons')
+    finding_francis.insert('meat-head')
+    finding_francis.insert('brown-pants')
+
+    finding_francis.append('car-goon')
+
+    actual = finding_francis.__str__()
+    expected = '{ brown-pants } -> { meat-head } -> { goons } -> { car-goon } -> None '
+    assert actual == expected
 
 
+def test_append_multiple():
+    finding_francis = LinkedList('goons')
 
+    finding_francis.append('meat-head')
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
 
+    actual = finding_francis.__str__()
+    expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+def test_insert_before_mid():
+    finding_francis = LinkedList('goons')
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    
+    finding_francis.insert_before('brown-pants', 'meat-head')
+
+    actual = finding_francis.__str__()
+    expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+def test_insert_before_first():
+    # finding_francis = LinkedList('goons') #instantiate ll
+    finding_francis = LinkedList()
+
+    finding_francis.append('brown-pants')
+    # finding_francis.append('car-goon')
+    
+    finding_francis.insert_before('brown-pants', 'meat-head')
+
+    actual = finding_francis.__str__()
+    expected = '{ None } -> { brown-pants } -> None '
+    assert actual == expected
 
 ############
 # Fixtures #
