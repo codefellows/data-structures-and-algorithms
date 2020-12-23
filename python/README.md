@@ -88,3 +88,9 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 ![Challenge 06: mob-board](code_challenges/assets/Challenge-06-Whitboard.jpg)
 
 Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
+
+[Challenge 07: find-kth value PR]()
+
+![Challenge 07: mob-board](code_challenges/assets/Code Challenge 7.jpg)
+
+Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
