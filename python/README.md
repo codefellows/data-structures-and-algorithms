@@ -89,7 +89,7 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 
 Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
 
-[Challenge 07: find-kth value PR]()
+[Challenge 07: find-kth value PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/6)
 
 ![Challenge 07: mob-board](code_challenges/assets/Code Challenge 7.jpg)
 
