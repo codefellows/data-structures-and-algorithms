@@ -3,14 +3,58 @@ from linked_list.linked_list import LinkedList, Node
 def test_import():
     assert LinkedList
 
+# Code Challenge 07
+# globals for the tests:
+node = Node(0)
+link = LinkedList(node)
+link.insert_node(4)
+link.append(10)
+
+# “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+def test_nth():
+    link.kthFromEnd(1)
+    actual = 0
+    expected = 0
+    assert actual == expected
+
+# Where k is greater than the length of the linked list
+def test_greater_nth():
+    link.kthFromEnd(10)
+    actual = 'Number is greater than the end of the list'
+    expected = 'Number is greater than the end of the list'
+    assert actual == expected
+
+# Where k and the length of the list are the same
+def test_same_nth():
+    link.kthFromEnd(3)
+    actual = 4
+    expected = 4
+    assert actual == expected
+
+# Where k is not a positive integer
+def test_negative_nth():
+    link.kthFromEnd(-2)
+    actual = 'Negative number has been entered'
+    expected = 'Negative number has been entered'
+    assert actual == expected
+
+# Where the linked list is of a size 1
+def test_one_nth():
+    new_list = LinkedList()
+    new_list.insert_node(1)
+    new_list.kthFromEnd(1)
+    actual = 1
+    expected = 1
+    assert actual == expected
+
 # Code Challenge 06 
 
 # Add a node to the end of the linked list
 def test_append():
-    node = Node(0)
-    link = LinkedList(node)
-    link.insert_node(4)
-    link.append(10)
+    # node = Node(0)
+    # link = LinkedList(node)
+    # link.insert_node(4)
+    # link.append(10)
     actual = str(link)
     expected = f'{{ 4 }} -> {{ 0 }} -> {{ 10 }} -> NULL'
     assert actual == expected
@@ -27,10 +71,10 @@ def test_multi_append():
     
 # Insert a node before a node located in the middle of a linked list
 def test_before():
-    node = Node(0)
-    link = LinkedList(node)
-    link.insert_node(4)
-    link.append(10)
+    # node = Node(0)
+    # link = LinkedList(node)
+    # link.insert_node(4)
+    # link.append(10)
     link.insert_before(0, 5)
     actual = str(link)
     expected = f'{{ 4 }} -> {{ 5 }} -> {{ 0 }} -> {{ 10 }} -> NULL'
@@ -69,7 +113,7 @@ def test_after_last():
     expected = f'{{ 4 }} -> {{ 0 }} -> {{ 10 }} -> {{ 5 }} -> NULL'
     assert actual == expected
 
-# Code challenge 04 stuff
+# Code challenge 05 stuff
 # link = LinkedList()
 
 # def test_empty_list():
