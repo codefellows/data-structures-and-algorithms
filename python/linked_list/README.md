@@ -51,3 +51,25 @@ Audrena, Robert, Amber & Kim
 
 ## Link:
 [Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/pull/14)
+
+# Linked List Challenge 07
+<!-- Short summary or background information -->
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Challenge
+<!-- Description of the challenge -->
+To get all tests to pass and classes to work correctly.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+First we collaborated on the whiteboard. Next we searched the web for examples.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Link to whiteboard image](../assets/CodeChallenge07.png)
+
+## Collaboration
+Audrena, Robert & Amber
+
+## Link:
+[Link to pull request]()
