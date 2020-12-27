@@ -9,9 +9,9 @@ class LinkedList:
     Space: O(1)
     """
 
-    def __init__(self, value=None):
+    def __init__(self, head= None):
         # initialization here
-        self.head = Node(value)
+        self.head = Node(head)
         
 
     def insert(self, value):
@@ -82,37 +82,43 @@ class LinkedList:
         Space: O(1)
         Time: O(N)
         """
+        
+        current = self.head
         node = Node(value)
-        if self.head == None:
-            self.head == node
-            
-        else:
-            current = self.head
 
-            while current.next is not None:
-                if current.next == None:
+        while current is not None:
+
+            if current.next == None:
+                current.next = node
+                break
+            
+            current = current.next
+
+    
+    def insert_before(self, val, new_val):
+        current = self.head
+        if current.value == val:
+            self.insert(new_val)
+
+        else:
+            node = Node(new_val)
+
+            while current is not None:
+                if current.next.value == val:
+                    node.next = current.next 
                     current.next = node
                     break
 
-            current = current.next
-        
-        
-    
-    def insert_before(self, val, new_val):
-        node = Node(new_val)
-        current = self.head
-        
-        if current.next == None:
-            self.head = node
-            
-        while current is not None:
+                current = current.next
 
-            if current.next.value == val:
-                node.next = current.next 
-                current.next = node
-                break
-            else:
-                current = current.next 
+       
+
+                
+                    
+                  
+
+           
+
 
 
     
@@ -128,7 +134,7 @@ class Node:
     Output --> object: node w/value and reference
     
     """ 
-    def __init__(self, value, next=None):
+    def __init__(self, value, next= None):
         self.value = value
         self.next = next
 
@@ -137,11 +143,15 @@ class Node:
 
 
 if __name__ == "__main__":
-    finding_francis = LinkedList()
-    print("on instantiation", finding_francis.head.value)
+    finding_francis = LinkedList('goons')
     finding_francis.append('brown-pants')
-    print('post append', finding_francis.head.next)
-    print('post append str', finding_francis.__str__())
+    finding_francis.append('car-goon')
+    print('pre-Insert_before',finding_francis.__str__())
+    
+    finding_francis.insert_before('brown-pants', 'meat-head')
+    print('post-Insert_before', finding_francis.__str__())
+
+
 
 
 
@@ -149,3 +159,26 @@ if __name__ == "__main__":
     
     # finding_francis.insert_before('goons', 'meat-head')
     
+
+
+
+
+# FIXME:  ASK ABOUT WHY THIS WASN'T WORKING: does current have access to the value of next without actually traversing to it?? 
+
+#def insert_before(self, val, new_val):
+        # node = Node(new_val)
+        # current = self.head
+
+        # if self.includes(val) == False:
+        #     return f'the {val} you entered does not exist. to insert before this value, please add it to the LinkedList first'
+        # else:
+            
+        #     while current is not None:
+              
+        #         if current.next == val:
+      
+        #             node.next = current.next
+        #             current.next = node
+        #             break
+
+        #         current = current.next

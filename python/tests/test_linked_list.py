@@ -43,12 +43,18 @@ def test_llist_next_post_insert():
     expected = 'goons'
     assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_next_of_origin_node():
     """tests next of the original head Node upon list instantiation
     """
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
+    finding_francis.insert('brown-pants')
+    actual = finding_francis.__str__()
+    expected = '{ brown-pants } -> { meat-head } -> { goons } -> None '
+    assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_includes_method_true():
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
@@ -68,6 +74,7 @@ def test_includes_method_false():
     expected = False
     assert  actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_str_of_llist_class():
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
@@ -78,7 +85,7 @@ def test_str_of_llist_class():
     expected = '{ car-goon } -> { brown-pants } -> { meat-head } -> { goons } -> None '
     assert actual == expected
 
-
+# @pytest.mark.skip('checking base')
 def test_append():
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
@@ -90,7 +97,7 @@ def test_append():
     expected = '{ brown-pants } -> { meat-head } -> { goons } -> { car-goon } -> None '
     assert actual == expected
 
-
+# @pytest.mark.skip('checking base')
 def test_append_multiple():
     finding_francis = LinkedList('goons')
 
@@ -102,6 +109,7 @@ def test_append_multiple():
     expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
     assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_insert_before_mid():
     finding_francis = LinkedList('goons')
     finding_francis.append('brown-pants')
@@ -113,17 +121,17 @@ def test_insert_before_mid():
     expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
     assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_insert_before_first():
-    # finding_francis = LinkedList('goons') #instantiate ll
-    finding_francis = LinkedList()
-
+    finding_francis = LinkedList('goons') 
+   
     finding_francis.append('brown-pants')
-    # finding_francis.append('car-goon')
+    finding_francis.append('car-goon')
     
-    finding_francis.insert_before('brown-pants', 'meat-head')
+    finding_francis.insert_before('goons', 'meat-head')
 
     actual = finding_francis.__str__()
-    expected = '{ None } -> { brown-pants } -> None '
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { car-goon } -> None '
     assert actual == expected
 
 ############
