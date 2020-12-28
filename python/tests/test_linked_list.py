@@ -124,7 +124,6 @@ def test_insert_before_mid():
 # @pytest.mark.skip('checking base')
 def test_insert_before_first():
     finding_francis = LinkedList('goons') 
-   
     finding_francis.append('brown-pants')
     finding_francis.append('car-goon')
     
@@ -132,6 +131,32 @@ def test_insert_before_first():
 
     actual = finding_francis.__str__()
     expected = '{ meat-head } -> { goons } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+#@pytest.mark.skip('pending code')
+def test_insert_after_mid():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+
+    finding_francis.insert_after('brown-pants', 'colossus')
+
+    actual = finding_francis.__str__()
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { colossus } -> { car-goon } -> None '
+    assert actual == expected
+
+#@pytest.mark.skip('pending code')
+def test_insert_after_tail():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
+
+    actual = finding_francis.__str__()
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { car-goon } -> { colossus } -> None '
+
     assert actual == expected
 
 ############

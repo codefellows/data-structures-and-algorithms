@@ -111,7 +111,25 @@ class LinkedList:
 
                 current = current.next
 
-       
+    def insert_after(self, val, new_val):
+        current = self.head
+
+        if self.includes(val) == False:
+            return f'the {val} you entered does not exist. to insert before this value, please add it to the LinkedList first'
+        
+        node = Node(new_val)
+
+        while current is not None:
+            if current.value == val or None:
+                node.next = current.next
+                current.next = node
+                break
+
+            current = current.next
+
+
+        
+
 
                 
                     
