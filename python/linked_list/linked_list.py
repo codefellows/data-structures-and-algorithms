@@ -128,7 +128,26 @@ class LinkedList:
             current = current.next
 
 
+    def kth_from_end(self, k):
+
+        current = self.head
+
+        if current == None:
+            return f'an empty list has no Kth value, to use this method, first create a linked list'
         
+        counter = []
+
+        while current is not None:
+            counter.append(current.value)
+            current = current.next
+        
+        if abs(k) > len(counter):
+            return f'please enter a value less than {len(counter)}'
+        
+        if k < 0:
+            return counter[abs(k)]
+        else:
+            return counter[len(counter)- k]
 
 
                 

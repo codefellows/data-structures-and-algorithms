@@ -159,6 +159,33 @@ def test_insert_after_tail():
 
     assert actual == expected
 
+
+# @pytest.mark.skip('pending code')
+def test_kth_from_end_expected_input():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
+
+    actual = finding_francis.kth_from_end(2)
+    expected = 'car-goon'
+    assert actual == expected
+
+# @pytest.mark.skip('pending code')
+def test_kth_from_end_bad_input():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
+
+    actual = finding_francis.kth_from_end(7)
+    expected = 'please enter a value less than 5'
+    assert actual == expected
+
+
+
 ############
 # Fixtures #
 ############
