@@ -145,7 +145,15 @@ class LinkedList:
             current = current.next
 
 
-    def kth_from_end(self, k: int) -> int:
+    def kth_from_end(self, k: int) -> any:
+        """returns the value at the Kth position of an instance of LinkedList
+
+            Input <-- Int
+            Output --> any
+
+            Time: O(N)
+            Space: O(1)
+        """
         try:
             spread = 0
             point = self.head
