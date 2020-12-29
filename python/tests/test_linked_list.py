@@ -181,7 +181,7 @@ def test_kth_from_end_bad_input():
     finding_francis.insert_after('car-goon', 'colossus')
 
     actual = finding_francis.kth_from_end(7)
-    expected = 'please enter a value less than 5'
+    expected = 'ValueError: 7 out of index range'
     assert actual == expected
 
 

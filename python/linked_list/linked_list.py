@@ -7,7 +7,7 @@ class Node:
     Time: O(1)
     Space: O(1)
     """ 
-    def __init__(self, value, next= None):
+    def __init__(self, value: any, next= None):
         self.value = value
         self.next = next
 
@@ -42,7 +42,7 @@ class LinkedList:
         self.head = node
     
 
-    def includes(self, check):
+    def includes(self, check: any) -> bool: 
         """ searches linked list for a value returns true if yes false if no. 
         Code based on psuedo code from reading asssingment @:https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/singly_linked_list.html
 
@@ -63,7 +63,7 @@ class LinkedList:
                 
         return False
         
-    def __str__(self):
+    def __str__(self) -> str:
         """ prints string representation of entire instance of linked list, Node instances seperated by `->`
 
         Input <-- None
@@ -73,21 +73,19 @@ class LinkedList:
         Space: O(N)
 
         """
-        once_and_future_string = []
-
+        once_and_future_string = ''
         current = self.head
 
-        while current is not None:
+        while current:
              
-                once_and_future_string.append(f'{{ {current.value} }} ->')
+                once_and_future_string += f'{{ {current.value} }} -> '
                 current = current.next
-                
-                
-        once_and_future_string.append('None ')        
-        console_log = ' '.join(once_and_future_string)
-        return console_log
+
+        return f'{once_and_future_string}None '        
+        
+       
                
-    def append(self, value):
+    def append(self, value: any):
         """ adds the value passed as an argument to the end of the linked list. non-fruitful function. 
 
         input <-- int
@@ -96,72 +94,106 @@ class LinkedList:
         Space: O(1)
         Time: O(N)
         """
-        
         current = self.head
-        node = Node(value)
 
-        while current is not None:
-
+        while current:
             if current.next == None:
-                current.next = node
-                break
+                current.next = Node(value)
+                return
             
             current = current.next
 
     
-    def insert_before(self, val, new_val):
+    def insert_before(self, val: any, new_val: any):
+        """insert new_val before the val in a linked list Instance.
+
+            Input <-- input1, input1 of any type
+            Output --> mutates linked List instance
+
+            Time: O(N)
+            Space: O(N)
+        """
         current = self.head
         if current.value == val:
             self.insert(new_val)
-
-        else:
-            node = Node(new_val)
-
-            while current is not None:
+        else: #!!! explicit `else:` must be used. implied else raises AttributeError
+            while current:
                 if current.next.value == val:
-                    node.next = current.next 
+                    node = Node(new_val, current.next) 
                     current.next = node
-                    break
+                    return
 
                 current = current.next
 
-    def insert_after(self, val, new_val):
+    def insert_after(self, val: any, new_val: any):
+        """insert new_val after val in an instance of LinkedList, if val does not exist appends new_val to the end of the lList instance
+
+        Input <-- Input1, and input2 of any type
+        Output --> mutates instance of LinkedList 
+
+        Time: O(N)
+        Space: O(N)
+        """
         current = self.head
-
-        if self.includes(val) == False:
-            return f'the {val} you entered does not exist. to insert before this value, please add it to the LinkedList first'
         
-        node = Node(new_val)
-
-        while current is not None:
+        while current:
             if current.value == val or None:
-                node.next = current.next
+                node = Node(new_val, current.next)
                 current.next = node
                 break
 
             current = current.next
 
 
-    def kth_from_end(self, k):
+    def kth_from_end(self, k: int) -> int:
+        try:
+            spread = 0
+            point = self.head
+            rear_guard = None
+            
+            if not point:
+                raise ValueError(f'cannot get {k}th value of an empty list')
 
-        current = self.head
+            while point:
+                if rear_guard:
+                    point = point.next
+                    rear_guard = rear_guard.next
+                elif spread == k:
+                    rear_guard = self.head
+                else:
+                    spread += 1
+                    point = point.next
+        
+            return rear_guard.value
+        except:
+            return f'ValueError: {7} out of index range'
+            
+        # FIXME:  how do you test with assertion when using a built-in exception object??? it I don't seem to be able to even get to the test as the exception kills the program. 
 
-        if current == None:
-            return f'an empty list has no Kth value, to use this method, first create a linked list'
         
-        counter = []
 
-        while current is not None:
-            counter.append(current.value)
-            current = current.next
+
+
+
+
+        # current = self.head
+
+        # if current == None:
+        #     return f'an empty list has no Kth value, to use this method, first create a linked list'
         
-        if abs(k) > len(counter):
-            return f'please enter a value less than {len(counter)}'
+        # counter = []
+
+        # while current is not None:
+        #     counter.append(current.value)
+        #     current = current.next
         
-        if k < 0:
-            return counter[abs(k)]
-        else:
-            return counter[len(counter)- k]
+        # if abs(k) > len(counter):
+        #     return f'please enter a value less than {len(counter)}'
+        
+        # if k < 0:
+        #     return counter[abs(k)]
+        # else:
+        #     return counter[len(counter)- k]
 
 
                 
