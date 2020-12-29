@@ -1,6 +1,19 @@
+class Node:
+    """ Constructs Nodes with values and a reference to next for use with LinkedList
+    
+    Input <-- value: any, reference to next node
+    Output --> object: node w/value and reference
+    
+    Time: O(1)
+    Space: O(1)
+    """ 
+    def __init__(self, value, next= None):
+        self.value = value
+        self.next = next
+
+
 class LinkedList:
-    """
-    builds an instance of a Singly Linked List. all relevant methods have their own docstrings
+    """builds an instance of a Singly Linked List. all relevant methods have their own docstrings
 
     Input <-- head, value: default='None'
     Output --> Object: instance='linked-list'
@@ -14,20 +27,21 @@ class LinkedList:
         self.head = Node(head)
         
 
-    def insert(self, value):
+    def insert(self, value: any):
         """ adds a node to the begining of an instantiated linked list.
+
         Input <-- value: may be of any data type
         Output --> None
 
         Time: O(1)
         Space: O(N)
         """
-        node = Node(value)
-
+        
         if self.head is not None:
-            node.next = self.head
+            node = Node(value, self.head)
         self.head = node
     
+
     def includes(self, check):
         """ searches linked list for a value returns true if yes false if no. 
         Code based on psuedo code from reading asssingment @:https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-05/resources/singly_linked_list.html
@@ -40,7 +54,7 @@ class LinkedList:
         """
         current = self.head
         
-        while current is not None:
+        while current:
 
             if current.value == check:
                 return True
@@ -164,16 +178,7 @@ class LinkedList:
 
 
 
-class Node:
-    """ Constructs Nodes with values and a reference to next for use with LinkedList
-    
-    Input <-- value: any, reference to next node
-    Output --> object: node w/value and reference
-    
-    """ 
-    def __init__(self, value, next= None):
-        self.value = value
-        self.next = next
+
 
 
 
