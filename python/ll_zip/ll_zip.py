@@ -15,17 +15,36 @@ class LinkedList:
     """
     def __init__(self, head=None):
         self.head = head
+
+    # def insert_node(self, value):
+    #     """[Inserts a new node instanciation from Node class]
+
+    #     Args:
+    #         value ([int]): [the value we want our node to have]
+    #     """
+    #     node = Node(value)
+    #     if self.head is not None:
+    #         node.next = self.head
+    #     self.head = node
     
-    def insert_node(self, value):
-        """[Inserts a new node instanciation from Node class]
+    def append(self, value):
+        """[given a value, append this as a new node to the end of the linked list]
 
         Args:
-            value ([int]): [the value we want our node to have]
+            value ([int]): [an integer to be added as the value param of the node]
         """
-        node = Node(value)
-        if self.head is not None:
-            node.next = self.head
-        self.head = node
+        new_node = Node(value)
+        current = self.head
+
+        #check for empty list
+        if current is None:
+            self.head = new_node
+            return
+        while current.next is not None:
+            current = current.next
+
+        current.next = new_node
+        return
 
     def __str__(self):
         output = ''
@@ -53,13 +72,13 @@ def zipLists(list1, list2):
             print(next_val)
             l1 = l1.next
             # add it to our new linked list
-            link.insert_node(next_val)
+            link.append(next_val)
             # ptr.next = next_val
             # ptr = ptr.next
 
             print(l2.value)
             next_val = l2.value
-            link.insert_node(next_val)
+            link.append(next_val)
             l2 = l2.next
             # ptr.next = newNode
             # ptr = ptr.next
@@ -69,14 +88,15 @@ def zipLists(list1, list2):
 if __name__ == '__main__':
     # new_node = Node()
     link = LinkedList()
-    link.insert_node(5)
-    link.insert_node(3)
-    link.insert_node(1)
+    link.append(1)
+    link.append(3)
+    link.append(5)
     link2 = LinkedList()
-    link2.insert_node(6)
-    link2.insert_node(4)
-    link2.insert_node(2)
-    #print(link, link2)
+    link2.append(2)
+    link2.append(4)
+    link2.append(6)
+    # print(link)
+    # print(link2)
     zipped = zipLists(link, link2)
     print(zipped)
 
