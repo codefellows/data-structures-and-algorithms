@@ -174,14 +174,9 @@ class LinkedList:
         
             return rear_guard.value
         except:
-            return f'ValueError: {7} out of index range'
+            return f'ValueError: {k} out of index range'
             
         # FIXME:  how do you test with assertion when using a built-in exception object??? it I don't seem to be able to even get to the test as the exception kills the program. 
-
-        
-
-
-
 
 
         # current = self.head
