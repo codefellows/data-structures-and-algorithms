@@ -94,3 +94,11 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
 ![Challenge 07: mob-board](code_challenges/assets/Code Challenge 7.jpg)
 
 Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
+
+[Challenge 08: zip-lists PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/8)
+
+***Intial WhiteBoard partnered with @LoganJones
+
+![initial whitboard for Challenge-08](code_challenges/assets/challenge-08-whiteboard.png)
+
+![@LoganJones whiteboard, different approach](code_challenges/assets/Lab Template)
