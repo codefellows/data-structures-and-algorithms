@@ -82,3 +82,15 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 *whiteboard image will not copy to project*
 
 [Challenge 05: Linked_List Implementation](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/4)
+
+[Challenge 06: LinkedList Insertions](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/5)
+
+![Challenge 06: mob-board](code_challenges/assets/Challenge-06-Whitboard.jpg)
+
+Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
+
+[Challenge 07: find-kth value PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/6)
+
+![Challenge 07: mob-board](code_challenges/assets/Code Challenge 7.jpg)
+
+Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins

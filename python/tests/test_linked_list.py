@@ -43,12 +43,18 @@ def test_llist_next_post_insert():
     expected = 'goons'
     assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_next_of_origin_node():
     """tests next of the original head Node upon list instantiation
     """
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
+    finding_francis.insert('brown-pants')
+    actual = finding_francis.__str__()
+    expected = '{ brown-pants } -> { meat-head } -> { goons } -> None '
+    assert actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_includes_method_true():
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
@@ -68,6 +74,7 @@ def test_includes_method_false():
     expected = False
     assert  actual == expected
 
+# @pytest.mark.skip('checking base')
 def test_str_of_llist_class():
     finding_francis = LinkedList('goons')
     finding_francis.insert('meat-head')
@@ -78,9 +85,104 @@ def test_str_of_llist_class():
     expected = '{ car-goon } -> { brown-pants } -> { meat-head } -> { goons } -> None '
     assert actual == expected
 
+# @pytest.mark.skip('checking base')
+def test_append():
+    finding_francis = LinkedList('goons')
+    finding_francis.insert('meat-head')
+    finding_francis.insert('brown-pants')
+
+    finding_francis.append('car-goon')
+
+    actual = finding_francis.__str__()
+    expected = '{ brown-pants } -> { meat-head } -> { goons } -> { car-goon } -> None '
+    assert actual == expected
+
+# @pytest.mark.skip('checking base')
+def test_append_multiple():
+    finding_francis = LinkedList('goons')
+
+    finding_francis.append('meat-head')
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+
+    actual = finding_francis.__str__()
+    expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+# @pytest.mark.skip('checking base')
+def test_insert_before_mid():
+    finding_francis = LinkedList('goons')
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    
+    finding_francis.insert_before('brown-pants', 'meat-head')
+
+    actual = finding_francis.__str__()
+    expected = '{ goons } -> { meat-head } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+# @pytest.mark.skip('checking base')
+def test_insert_before_first():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    
+    finding_francis.insert_before('goons', 'meat-head')
+
+    actual = finding_francis.__str__()
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { car-goon } -> None '
+    assert actual == expected
+
+#@pytest.mark.skip('pending code')
+def test_insert_after_mid():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+
+    finding_francis.insert_after('brown-pants', 'colossus')
+
+    actual = finding_francis.__str__()
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { colossus } -> { car-goon } -> None '
+    assert actual == expected
+
+#@pytest.mark.skip('pending code')
+def test_insert_after_tail():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
+
+    actual = finding_francis.__str__()
+    expected = '{ meat-head } -> { goons } -> { brown-pants } -> { car-goon } -> { colossus } -> None '
+
+    assert actual == expected
 
 
+# @pytest.mark.skip('pending code')
+def test_kth_from_end_expected_input():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
 
+    actual = finding_francis.kth_from_end(2)
+    expected = 'car-goon'
+    assert actual == expected
+
+# @pytest.mark.skip('pending code')
+def test_kth_from_end_bad_input():
+    finding_francis = LinkedList('goons') 
+    finding_francis.append('brown-pants')
+    finding_francis.append('car-goon')
+    finding_francis.insert_before('goons', 'meat-head')
+    finding_francis.insert_after('car-goon', 'colossus')
+
+    actual = finding_francis.kth_from_end(7)
+    expected = 'please enter a value less than 5'
+    assert actual == expected
 
 
 
