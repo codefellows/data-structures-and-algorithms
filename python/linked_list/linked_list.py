@@ -89,6 +89,18 @@ class LinkedList:
                 current.next = new_node
             current = current.next
             return
+
+        # Other way to do this
+
+        # current = self.head
+        # while current:
+            # if current.value == value:
+                # node = Node(new_val, current.next)
+                # current.next = node
+                # return
+            # current = current.next
+        
+        # return "not in list"
     
     def insert_after(self, value, new_value):
         """[Give a value and new value we want to insert the new_value after the value when it's found in the linked list]
@@ -137,6 +149,29 @@ class LinkedList:
         for num in range(0, length - k):
             current = current.next
         return current.value
+
+        # Other way to do this
+
+        # follower = None
+        # pace_behind = 0
+        # leader = self.head (goes till it hits none)
+
+        # while leader: # while leader is not none
+            # leader = leader.next # advance the leader
+            # if follower: # if the follower is not none 
+                # follower = follower.next
+            # elif pace_behind == k: # Once the leader has reached the value k we move the follower
+                # follower = self.head
+            # else: # if no other conditions are met we increment
+                # pace_behind += 1
+        # if not follower:
+            # raise ValueError("None")
+        # return follower.value
+
+
+
+        
+
 
     def __str__(self):
         # temp = self.head
