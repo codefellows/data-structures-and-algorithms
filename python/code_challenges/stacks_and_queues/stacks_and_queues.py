@@ -1,3 +1,9 @@
+
+class InvalidOperationError(BaseException):
+  pass
+
+
+
 class Node: 
   def __init__(self, value: any, next= None):
     """Creates a Node Instance with properties of value and next.
