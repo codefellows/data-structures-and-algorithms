@@ -15,18 +15,7 @@ class LinkedList:
     """
     def __init__(self, head=None):
         self.head = head
-
-    # def insert_node(self, value):
-    #     """[Inserts a new node instanciation from Node class]
-
-    #     Args:
-    #         value ([int]): [the value we want our node to have]
-    #     """
-    #     node = Node(value)
-    #     if self.head is not None:
-    #         node.next = self.head
-    #     self.head = node
-    
+   
     def append(self, value):
         """[given a value, append this as a new node to the end of the linked list]
 
@@ -56,8 +45,7 @@ class LinkedList:
 
 def zipLists(list1, list2):
     link = LinkedList()
-    # head = Node(0)
-    # # ptr = head
+
     l1 = list1.head
     l2 = list2.head
 
@@ -66,23 +54,43 @@ def zipLists(list1, list2):
             break
         else:
             next_val = 0
-            # print(l1.value)
-            # get the first val from l1
             next_val = l1.value
-            print(next_val)
+            #print(next_val)
             l1 = l1.next
-            # add it to our new linked list
             link.append(next_val)
-            # ptr.next = next_val
-            # ptr = ptr.next
 
-            print(l2.value)
+            #print(l2.value)
             next_val = l2.value
             link.append(next_val)
             l2 = l2.next
-            # ptr.next = newNode
-            # ptr = ptr.next
+
     return link
+    """
+    other way to do this:
+    l1 = list1.head
+    l2 = list2.head
+
+    while l1 and l2:
+        l1_next = l1.next
+        l2_next = l2.next
+
+        l1.next = current_ll2
+
+        #check for l1_next, if none then break
+        if not l1_next:
+            break
+
+        l2.next = l1_next
+
+        # now store the next, nexts
+        l1, l2 = l1_next, l2_next
+        or
+        l1 = l1_next
+        l2 = l2_next
+
+        return l1
+
+    """
 
 
 if __name__ == '__main__':
