@@ -1,6 +1,5 @@
-
 import pytest 
-from stacks_and_queues.stacks_and_queues import Stack, InvalidOperationError
+from code_challenges.stacks_and_queues.stacks_and_queues import Stack, InvalidOperationError
 
 def test_push_onto_empty():
   s = Stack()
@@ -69,7 +68,7 @@ def test_peek_empty():
   with pytest.raises(InvalidOperationError) as e:
     s.peek()
   
-  assert str(e.value) == "Methodsf not allowed on empty collection"
+  assert str(e.value) == "Method not allowed on empty collection"
 
 def test_pop_empty():
   s = Stack()

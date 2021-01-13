@@ -2,8 +2,6 @@
 class InvalidOperationError(BaseException):
   pass
 
-
-
 class Node: 
   def __init__(self, value: any, next= None):
     """Creates a Node Instance with properties of value and next.
@@ -15,6 +13,8 @@ class Node:
     self.next = next
 
 class Stack:
+  """Creates an Instance of a Stack
+  """
 
   def __init__(self, top = None):
     """Creates a Stack Instance with a property of Top defaulting to none. 
@@ -39,12 +39,12 @@ class Stack:
     """
     return f'Instance of Stack. Top: {self.top.value} Next: {self.top.next}'
   
-  def __repr__(self) -> str:
-    """Returns a String Description of the Instance. 
-       input<-- none
-       output --> str
-    """
-    return f'Instance of Stack. Methods: {self.push}, {self.pop}, {self.peek}, {self.is_empty}'
+  # def __repr__(self) -> str:
+  #   """Returns a String Description of the Instance. 
+  #      input<-- none
+  #      output --> str
+  #   """
+  #   return f'Instance of Stack. Methods: {self.push}, {self.pop}, {self.peek}, {self.is_empty}'
 
   def push(self, value: any):
     """Adds a Node to the top of the stack, assigning its next as the existing top 
@@ -89,9 +89,13 @@ class Stack:
     """
     if not self.top:
       return True
+    else:
+      return False
 
 
 class Queue:
+  """Creates an Instance of Queue
+  """
 
   def __init__(self):
     """Creates a Queue Instance with a properties of "front" and "rear" defaulting to none. 
@@ -111,12 +115,12 @@ class Queue:
     """
     return f'Queue Instance, front: {self.front.value}, rear: {self.rear.value}'
 
-  def __repr__(self):
-    """Returns String Literal with a Description of the Instance
-    input <-- none
-    output --> str
-    """
-    return f'Instance of Queue, Methods {self.enqueue}, {self.dequeue}, {self.peek}, {self.is_empty}'
+  # def __repr__(self):
+  #   """Returns String Literal with a Description of the Instance
+  #   input <-- none
+  #   output --> str
+  #   """
+  #   return f'Instance of Queue, Methods {self.enqueue}, {self.dequeue}, {self.peek}, {self.is_empty}'
 
 
   def enqueue(self, value):
@@ -126,24 +130,26 @@ class Queue:
     """
     if not self.front:
       node = Node(value)
-      self.front, self.rear = node
+      self.front = node 
+      self.rear = node
     else: 
-      node = Node(value, self.rear)
+      node = Node(value)
+      self.front.next = node
       self.rear = node
 
-  def dequeue(self):
+  def dequeue(self)-> any:
     """Removes the front node of the Queue and returns its value, re-assigning it's next as the new front node
     input <-- none
     output --> value: any
     """
     if self.is_empty() == False:
       temp = self.front
-      self.front = self.front.next 
-      return temp.front.value
+      self.front = temp.next 
+      return temp.value
     else:
       raise InvalidOperationError("Method not allowed on an empty collection")
 
-  def peek(self):
+  def peek(self)-> any:
     """Returns the value of the front node. DOES NOT MUTATE THE QUEUE
     input <-- none
     output -->  value: any
@@ -151,7 +157,7 @@ class Queue:
     if self.is_empty() == False:
       return self.front.value
     else: 
-      raise InvalidOperationError("Method not allowed on empty collection")
+      raise InvalidOperationError("Method not allowed on an empty collection")
   
   def is_empty(self)-> bool:
     """Checks if Queue is empty and returns bool
@@ -160,4 +166,5 @@ class Queue:
     """
     if not self.front:
       return True
-  
+    else: 
+      return False

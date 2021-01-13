@@ -1,5 +1,5 @@
 import pytest
-from stacks_and_queues.stacks_and_queues import Queue, InvalidOperationError
+from code_challenges.stacks_and_queues.stacks_and_queues import Queue, InvalidOperationError
 
 
 def test_enqueue():
@@ -10,13 +10,12 @@ def test_enqueue():
   assert actual == expected
 
 def test_dequeue():
-  #TODO: write the test
   q = Queue()
   q.enqueue("apple")
   q.enqueue("banana")
   q.dequeue()
   actual = q.peek()
-  expected = "apple"
+  expected = "banana"
   assert actual == expected
 
 
@@ -30,11 +29,10 @@ def test_peek():
   assert actual == expected
 
 def test_peek_when_empty():
-  #TODO: test that it raises an exception when queue is empty
   q = Queue()
   with pytest.raises(InvalidOperationError) as e:
     q.peek()
-  assert str(e.value) == "Method cannot be called on an empty collection"
+  assert str(e.value) == "Method not allowed on an empty collection"
 
 def test_enqueue_one():
   q = Queue()
@@ -52,11 +50,10 @@ def test_enqueue_two():
   assert actual == expected
 
 def test_dequeue_when_empty():
-  #TODO: should raise exception if attempting to dequeue empty queue
   q = Queue()
   with pytest.raises(InvalidOperationError) as e:
     q.dequeue()
-  assert str(e.value) == "Method cannot be called on an empty Collection"
+  assert str(e.value) == "Method not allowed on an empty collection"
   
 
 def test_dequeue_when_full():
@@ -70,25 +67,23 @@ def test_dequeue_when_full():
  
 
 def test_peek_post_dequeue():
-  #TODO: should return new first value if peek is called after dequeue
   q = Queue()
   q.enqueue("apple")
   q.enqueue("banana")
   q.enqueue("cucumber")
 
   q.dequeue()
+  
   actual = q.peek()
   expected = "banana"
   assert actual == expected
 
 
 def test_is_empty():
-  #TODO: should return True if no items enqueue
   q = Queue()
   assert q.is_empty() == True
 
 def test_exhausted():
-  #TODO: fn:is_empty() should return true after all items have been dequed
   q = Queue()
   q.enqueue("apple")
   q.enqueue("banana")
