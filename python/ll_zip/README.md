@@ -15,4 +15,4 @@ First Louis and I collaborated on the whiteboard. Next I searched the web for ex
 [Link to whiteboard image](../assets/CodeChallenge08.png)
 
 ## Link:
-[Link to pull request]()
+[Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/pull/18)
