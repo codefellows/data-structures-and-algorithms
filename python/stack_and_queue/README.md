@@ -31,4 +31,4 @@ Followed along during the class then figured out how to make it work.
 [Link to whiteboard image](../assets/CodeChallenge10.PNG)
 
 ## Link:
-[Link to pull request]()
+[Link to pull request](https://github.com/PyDrummer/data-structures-and-algorithms/pull/19)
