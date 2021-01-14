@@ -60,3 +60,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ***Pair-Program whiteboard w/ @sean Hawkins
 ![WhiteBoard](./python/code_challenges/assets/array-reverse.jpg)
+
+#### challenge 03: array_binary_search
+[array_binary_search_PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/3)
+![Whitboard Image](python/code_challenges/assets/array_binary_search_whiteboard.png)
