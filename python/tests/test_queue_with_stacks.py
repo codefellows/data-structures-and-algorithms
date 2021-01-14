@@ -1,19 +1,21 @@
 import pytest
 from code_challenges.queue_with_stacks.queue_with_stacks import PseudoQueue
+from code_challenges.stacks_and_queues.stacks_and_queues import InvalidOperationError
 
-def test_node_import():
-  node = Node('value')
-  assert node.value == 'value'
 
 def test_front_stack_empty():
   q = PseudoQueue()
   assert q.front.top == None
 
-def test_enqueue_one():
+def test_enqueue_first_node():
   q = PseudoQueue()
   q.enqueue('monkey')
-  assert q.front.peek()  == 'monkey'
-  assert q.rear.peek() == 'monkey'
+  actual1 = q.front.peek()
+  expected1 = 'monkey'
+  assert actual1 == expected1
+  actual2 = q.rear.peek()
+  expected2 = 'monkey'
+  assert actual2 == expected2
 
 def test_enqueue_two():
   q = PseudoQueue()
@@ -26,17 +28,23 @@ def test_dequeue_one():
   q = PseudoQueue()
   q.enqueue('monkey')
   q.enqueue('business')
-  q.dequeue()
-  assert q.front.peek() == 'business'
+  actual1 = q.dequeue()
+  expected1 = 'monkey'
+  assert actual1 == expected1
+
 
 def test_dequeue_two():
   q = PseudoQueue()
   q.enqueue('monkey')
-  q.enquque('business')
+  q.enqueue('business')
   q.enqueue('time')
+
   q.dequeue()
-  q.dequeue()
-  assert q.front.peek() == 'time'
+  
+  actual1 = q.dequeue()
+  expected1 = 'business'
+  assert actual1 == expected1
+
 
 def test_dequeue_empty_on_instantiate():
   q = PseudoQueue()

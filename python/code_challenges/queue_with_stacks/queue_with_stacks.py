@@ -1,4 +1,4 @@
-from stacks_and_queues.stacks_and_queues import Stack, Node, InvalidOperationError
+from code_challenges.stacks_and_queues.stacks_and_queues import Stack, Node, InvalidOperationError
 
 class PseudoQueue:
   """Creates instance of Queue using stacks to track front and rear of queue
@@ -20,13 +20,25 @@ class PseudoQueue:
        output --> non-fruitful (mutates instance of PseudoQueue in place)
     """ 
     if not self.front.top:
-      node = Node(value)
-      self.front.push(node)
-      self.rear.push(node)
+      self.front.push(value)
+      self.rear.top = self.front.top
     else:
-      node = Node(value)
-      self.rear.top.next = node
-      self.rear.push(node)
+      curr_rear = self.rear.top
+      self.rear.push(value)
+      curr_rear.next = self.rear.top
 
+  def dequeue(self):
+    if self.front.top.next == None:
+      raise InvalidOperationError('Method not allowed on an empty collection')
+    else:  
+      new_front = self.front.top.next
+      temp = self.front.pop()
+      self.front.push(new_front.value)
+      return temp
+   
+      
+
+
+  
     
 
