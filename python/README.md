@@ -107,3 +107,5 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
 [Challenge 11: queue with stacks PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/10)
 ![Challenge 11 whiteboard](code_challenges/assets/Challenge-11-whiteboard.png)
 
+[Challenge 12: fifo_animal shelter]()
+![Challenge12: whiteboard](code_challenges/assets/challenge-12-whiteboard.png)
