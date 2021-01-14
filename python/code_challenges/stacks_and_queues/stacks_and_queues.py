@@ -1,8 +1,13 @@
 
 class InvalidOperationError(BaseException):
+"""Custom Exception "Method not allowed on an empty collection
+  """
   pass
 
 class Node: 
+  """Creates a Node object for use with Stack and Queue
+  """
+
   def __init__(self, value: any, next= None):
     """Creates a Node Instance with properties of value and next.
        
