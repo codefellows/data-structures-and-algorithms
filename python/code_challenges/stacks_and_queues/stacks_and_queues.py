@@ -134,7 +134,7 @@ class Queue:
       self.rear = node
     else: 
       node = Node(value)
-      self.front.next = node
+      self.rear.next = node
       self.rear = node
 
   def dequeue(self)-> any:
