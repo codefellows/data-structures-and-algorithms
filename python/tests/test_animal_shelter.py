@@ -10,7 +10,7 @@ def test_dog():
 def test_dequeue():
     a = AnimalShelter()
     a.enqueue("dog")
-    actual = a.dequeue()
+    actual = a.dequeue('dog')
     expected = "dog"
     assert actual == expected
 
@@ -19,6 +19,6 @@ def test_not_dog_or_cat():
     a.enqueue("Lizard")
     a.enqueue("dog")
     a.enqueue("cat")
-    actual = a.dequeue()
+    actual = a.dequeue('lizard')
     expected = "null"
     assert actual == expected
