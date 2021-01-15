@@ -19,8 +19,8 @@ class AnimalShelter():
         # // INPUT <-- value to add to queue (will be wrapped in Node internally)
         # // OUTPUT <-- none
         low_val = value.lower()
-        if low_val != 'dog' and low_val != 'cat':
-            low_val = 'null'
+        # if low_val != 'dog' and low_val != 'cat':
+        #     low_val = 'null'
         
         node = Node(low_val)
         if not self.first:
@@ -30,16 +30,32 @@ class AnimalShelter():
             self.last.next = node 
             self.last = node 
 
-    def dequeue(self):
+    def dequeue(self, perf):
+        low_perf = perf.lower()
+        if low_perf != 'dog' and low_perf != 'cat':
+            low_perf = 'null'
         # // INPUT <-- none
-        # // OUTPUT <-- value of the removed Node
+        # // OUTPUT <-- perfue of the removed Node
         # // EXCEPTION if queue is empt 
         if self.is_empty():
             raise InvalidOperationError("Method not allowed on empty collection")
 
         temp = self.first
+        while temp.value != low_perf:
+            if low_perf != 'dog' and low_perf != 'cat':
+                temp.value = 'null'
+                return temp.value
+            elif low_perf != 'dog':
+                temp = self.first.next
+                continue
+            elif low_perf != 'cat':
+                temp = self.first.next
+                continue
+        
         self.first = self.first.next
         temp.next = None
+
+        
 
         return temp.value
 
@@ -58,5 +74,6 @@ class AnimalShelter():
 if __name__ == '__main__':
     a = AnimalShelter()
     a.enqueue("dog")
+    a.enqueue("cat")
     a.enqueue("Lizard")
-    print(a.dequeue())
+    print(a.dequeue('cat'))
