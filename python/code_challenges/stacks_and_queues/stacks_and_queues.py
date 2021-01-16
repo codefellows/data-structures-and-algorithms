@@ -1,6 +1,6 @@
 
 class InvalidOperationError(BaseException):
-"""Custom Exception "Method not allowed on an empty collection
+  """Custom Exception "Method not allowed on an empty collection
   """
   pass
 
