@@ -110,6 +110,8 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
 [Challenge 12: fifo_animal shelter](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/11)
 ![Challenge12: whiteboard](code_challenges/assets/challenge-12-whiteboard.png)
 
-[Challenge 13: multi-bracked validation PR]()
+
+
+[Challenge 13: multi-bracked validation PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/12)
 
 ![Challenge 13: whiteboard](code_challenges/assets/Challenge-13-whiteboard.png)
