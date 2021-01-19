@@ -19,11 +19,14 @@ def multi_bracket_validation(input):
 
         for i in input:
             if i in front:
-                valOne.append(front.index(i))
+                valOne.append(front.index(i)+1)
             elif i in back:
-                valTwo.append(back.index(i))
+                valTwo.append(back.index(i)+1)
 
-        if valOne == valTwo:
+        sumOne = sum(valOne)
+        sumTwo = sum(valTwo)
+
+        if sumOne == sumTwo:
             return True
         else:
             return False
