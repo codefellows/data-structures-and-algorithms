@@ -82,18 +82,22 @@ class BinarySearchTree(BinaryTree):
     """
     def traverse(root, val):
       if not root:
-        return False
+        return
+      if type(val) == bool:
+        return val
       if root.value == val:
-        return True
-      if type(val) != bool:
-        return False
+        val = True
+        print(f'val: {val}')
+        return val
       elif val < root.value:
         traverse(root.left, val)
       elif val > root.value:
         traverse(root.right, val)
-      else:
-        return False
-    return traverse(self.root, val)  
+      return val
+
+    verity = traverse(self.root, val)
+    print(f'verity: {verity} verity type: {type(verity)}')
+    return False if type(verity) == int else verity
       
   
     
