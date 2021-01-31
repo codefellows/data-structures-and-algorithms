@@ -24,7 +24,7 @@ def test_binary_tree_instance():
   groot = Node('I am Groot')
   grok.root = groot
   assert grok.root.value == 'I am Groot'
-  assert grok.__str__() == 'An instance of a BinaryTree, root is I am Groot'
+  assert grok.__repr__() == 'An instance of a BinaryTree, root is I am Groot'
 
 
 def test_pre_order():
@@ -73,3 +73,54 @@ def test_post_order():
   grok.root.left.right = rocket
 
   assert grok.post_order() == ['Groot', 'Trash Panda', 'Am', 'Future Antman', 'I']
+
+def test_bst_instance():
+  hal = BinarySearchTree()
+  assert hal.root == None
+  hal.root = Node(9)
+  assert hal.root.value == 9
+
+def test_bst_contains_false():
+  hal = BinarySearchTree()
+  jarvis = Node(9)
+  mr_robot = Node(3) 
+  dva = Node(4) 
+  navi = Node(5) 
+  gdi = Node(7) 
+  nod = Node(2) 
+  ghost = Node(6) 
+  winter = Node(1) 
+  navi.left = nod
+  navi.right = gdi
+  nod.left = winter
+  nod.right = dva
+  dva.left = mr_robot
+  gdi.left = ghost
+  gdi.right = jarvis
+  hal.root = navi
+
+  actual = hal.contains(8)
+  assert actual == False
+
+
+def test_bst_contains_true():
+  hal = BinarySearchTree()
+  jarvis = Node(9)
+  mr_robot = Node(3) 
+  dva = Node(4) 
+  navi = Node(5) 
+  gdi = Node(7) 
+  nod = Node(2) 
+  ghost = Node(6) 
+  winter = Node(1) 
+  navi.left = nod
+  navi.right = gdi
+  nod.left = winter
+  nod.right = dva
+  dva.left = mr_robot
+  gdi.left = ghost
+  gdi.right = jarvis
+  hal.root = navi 
+
+  actual = hal.contains(6)
+  assert actual == True
