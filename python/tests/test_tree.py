@@ -124,3 +124,50 @@ def test_bst_contains_true():
 
   actual = hal.contains(6)
   assert actual == True
+
+
+def test_add_empty_bst():
+  hal = BinarySearchTree()
+  assert hal.root == None
+  hal.add(18)
+  assert hal.root.value == 18
+
+
+def test_add_less_root():
+  hal = BinarySearchTree()
+  hal.add(18)
+  hal.add(9)
+  assert hal.root.value == 18
+  assert hal.root.left.value == 9
+
+
+def test_add_more_root():
+  hal = BinarySearchTree()
+  hal.add(18)
+  hal.add(27)
+  assert hal.root.value == 18
+  assert hal.root.right.value == 27
+
+
+def test_add_less_root_more_child():
+  hal = BinarySearchTree()
+  hal.add(18)
+  hal.add(9)
+  hal.add(12)
+  print(f'hal.root.left.value:{hal.root.left.value}')
+  assert hal.root.left.right.value == 12
+
+def test_add_more_root_less_child():
+  hal = BinarySearchTree()
+  hal.add(18)
+  hal.add(27)
+  hal.add(21)
+  assert hal.root.right.left.value == 21
+
+def test_add_duplicate():
+  hal = BinarySearchTree()
+  hal.add(18)
+  hal.add(9)
+  with pytest.raises(ValueError) as excinfo:
+    hal.add(9)
+  assert '9 already exists in BinarySearchTree' in str(excinfo.value)

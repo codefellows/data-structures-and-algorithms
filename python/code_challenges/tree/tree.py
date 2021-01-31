@@ -7,10 +7,10 @@ class Node:
     self.right = None
 
   def __str__(self):
-    return f'A binary Tree Node value of {self.value} left: {self.left} right: {self.right}'
+    return f'A binary Tree Node value of {self.value}'
 
   def __repr__(self):
-    return f'A binary Tree Node value of {self.value} left: {self.left} right: {self.right}'
+    return f'A binary Tree Node value of {self.value}'
 
 class BinaryTree:
   """Creates an empty BinaryTree instance, and holds methods for traversal as well as adding nodes to the Tree. for use with BinarySearchTree
@@ -86,7 +86,6 @@ class BinarySearchTree(BinaryTree):
         return
       if root.value == val[0]:
         val.append(True)
-        print(f'val: {val}')
         return val
       if val[0] < root.value and root.left:
         traverse(root.left, val)
@@ -97,6 +96,33 @@ class BinarySearchTree(BinaryTree):
       return val
 
     return traverse(self.root, val)[1]
+
+  def add(self, val):
+      if not self.root:
+        self.root = Node(val)
+        return
+      
+      def traverse(root, val):
+        if not root:
+          return
+        if root.value == val:
+          raise ValueError(f'{val} already exists in BinarySearchTree')
+        
+        if val < root.value:
+          if root.left == None:
+            root.left = Node(val)
+            return
+          else:
+            traverse(root.left, val)
+        if val > root.value:
+          if root.right == None:
+            root.right = Node(val)
+            return
+          else:
+            traverse(root.right, val)
+          
+      traverse(self.root, val)
+      return
     
     
 
