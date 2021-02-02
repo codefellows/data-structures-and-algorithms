@@ -46,6 +46,34 @@ class BinaryTree:
         traverse(self.root)
         return post_list
 
+    def find_maximum_value(self):
+        val = 0
+        check = self.pre_order()
+        for i in check:
+            if val < i:
+                val = i
+        return val
+
+        ### Second method
+        # def traverse(root):
+        #     nonlocal val
+        #     val = root.value
+        #     if not root.right and not root.left:
+        #         return
+        #     if root.left:
+        #         if val < root.left.value:
+        #             traverse(root.left)
+        #         else:
+        #             traverse(root.right)
+        #     else:
+        #         traverse(root.right)
+        # traverse(self.root)
+        # return val
+
+        
+        
+
+
 # Create a BinarySearchTree class
 
 class BinarySearchTree(BinaryTree):
@@ -84,13 +112,15 @@ class BinarySearchTree(BinaryTree):
                 return BinarySearchTree.contains(root.left, val)
 
 if __name__ == '__main__':
-    tree = BinarySearchTree()
+    tree = BinaryTree()
     tree.root = Node(50)
     tree.root.left = Node(30)
     tree.root.right = Node(70)
     tree.root.left.left = Node(20)
     tree.root.left.right = Node(40)
+    tree.root.right.right = Node(80)
     # tree.add(60)
-    print(tree.post_order())
+    # print(tree.pre_order())
+    print(tree.find_maximum_value())
     # print(tree.contains(tree.root, 34))
 
