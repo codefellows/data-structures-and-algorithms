@@ -154,7 +154,7 @@ def test_add_less_root_more_child():
   hal.add(18)
   hal.add(9)
   hal.add(12)
-  print(f'hal.root.left.value:{hal.root.left.value}')
+  
   assert hal.root.left.right.value == 12
 
 def test_add_more_root_less_child():
@@ -171,3 +171,52 @@ def test_add_duplicate():
   with pytest.raises(ValueError) as excinfo:
     hal.add(9)
   assert '9 already exists in BinarySearchTree' in str(excinfo.value)
+
+
+def test_find_maximum_value_empty():
+  hal = BinaryTree()
+  with pytest.raises(ValueError) as excinfo:
+    hal.find_maximum_value()
+  assert str(excinfo.value) == 'Cannot search an Empty BinaryTree'
+
+
+def test_find_maximum_on_left():
+  grok = BinaryTree()
+  groot = Node(12)
+  i = Node(9)
+  am = Node(5)
+  starlord = Node(3)
+  rocket = Node(7)
+  grok.root = i
+  grok.root.left = am
+  grok.root.right = starlord
+  grok.root.left.left = groot
+  grok.root.left.right = rocket
+  actual = grok.find_maximum_value()
+  assert actual == 12
+
+
+def test_find_maximum_on_right():
+  grok = BinaryTree()
+  groot = Node(3)
+  i = Node(9)
+  am = Node(5)
+  starlord = Node(12)
+  rocket = Node(7)
+  grok.root = i
+  grok.root.left = am
+  grok.root.right = starlord
+  grok.root.left.left = groot
+  grok.root.left.right = rocket
+  actual = grok.find_maximum_value()
+  print(grok.pre_order())
+  assert actual == 12
+
+
+
+
+
+
+
+
+

@@ -17,7 +17,6 @@ class BinaryTree:
   """
   def __init__(self):
     self.root=None
-    
 
   def __str__(self):
     return f'An instance of a BinaryTree, root is {self.root}'
@@ -61,6 +60,32 @@ class BinaryTree:
       result.append(root.value)
       return result
     return traverse(self.root)
+    
+  def find_maximum_value(self, max_val=[None]):
+    if not self.root:
+      raise ValueError(f'Cannot search an Empty BinaryTree')
+    
+    def traverse(root, max_val):
+      if not root:
+        return
+      if max_val[0] == None or max_val[0] < root.value:
+        # print(f'max_val: {max_val} root.value: {root.value}')
+        max_val.pop(0)
+        max_val.append(root.value)
+      
+      if root.left:
+        traverse(root.left, max_val)
+      if root.right:
+        traverse(root.right, max_val)
+      return max_val
+    max_val = traverse(self.root, max_val)[0]
+    return max_val
+
+  
+
+
+
+
 
 
       
