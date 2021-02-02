@@ -1,6 +1,5 @@
 # Trees
 
-
 ## Challenge
 <!-- Description of the challenge -->
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
@@ -15,3 +14,14 @@ Define a method named contains that accepts a value, and returns a boolean indic
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 I recalled what i had learned from Dario's code example lecture then started googling other examples of the topics not covered. Big O is O(n) for almost all the aspects of this.
+
+# Code Challenge: Class 16
+
+## Challenge
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Collaboration
+Anthony Beaver and Karlo Mangubat
+
+## Whiteboard
+[Link to whiteboard image](../assets/CodeChallenge16.png)
