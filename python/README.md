@@ -111,3 +111,6 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
 ![Challenge12: whiteboard](code_challenges/assets/challenge-12-whiteboard.png)
 
 [Binary Tree implementation]()
+
+[Challenge 16: find_max_value](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/14)
+  ![Challenge 16 Whiteboard](code_challenges/assets/code-challenge-16-whiteboard.png)
