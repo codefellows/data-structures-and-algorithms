@@ -124,7 +124,7 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
   ![Challenge 16 Whiteboard](code_challenges/assets/code-challenge-16-whiteboard.png)
 
 
-[Challenge 17: Breadth first search PR]()
+[Challenge 17: Breadth first search PR](https://github.com/MasonChance/data-structures-and-algorithms-1/pull/16)
  ![Challenge 17 Whiteboard](code_challenges/assets/code-challenge-17-whitboard.png)
 
 

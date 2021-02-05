@@ -89,10 +89,9 @@ class BinaryTree:
     by_layer = list()
     line_up = Q()
     line_up.enqueue(self.root)
-    print(f'\nline_up Queue[front]: {line_up.peek()} ')
+    
     while line_up.is_empty() == False:
       curr = line_up.dequeue()
-      print(f'\n curr {curr} ')
       if curr.left:
         line_up.enqueue(curr.left) 
       if curr.right:  
