@@ -209,12 +209,24 @@ def test_find_maximum_on_right():
   grok.root.left.left = groot
   grok.root.left.right = rocket
   actual = grok.find_maximum_value()
-  print(grok.pre_order())
+  
   assert actual == 12
 
+def test_breadth_first():
+  grok = BinaryTree()
+  groot = Node('Groot')
+  i = Node('I')
+  am = Node('am')
+  starlord = Node('Iowa')
+  rocket = Node('Trash Panda')
+  grok.root = i
+  grok.root.left = am
+  grok.root.right = groot
+  grok.root.left.left = starlord
+  grok.root.left.right = rocket
 
-
-
+  expected = ['I', 'am', 'Groot', 'Iowa', 'Trash Panda']
+  assert grok.breadth_first() == expected
 
 
 

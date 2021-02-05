@@ -1,3 +1,8 @@
+from code_challenges.stacks_and_queues.stacks_and_queues import  Queue as Q 
+
+
+
+
 class Node:
   """Creates an instance of Node for use in BinaryTree
   """
@@ -69,7 +74,6 @@ class BinaryTree:
       if not root:
         return
       if max_val[0] == None or max_val[0] < root.value:
-        # print(f'max_val: {max_val} root.value: {root.value}')
         max_val.pop(0)
         max_val.append(root.value)
       
@@ -81,7 +85,22 @@ class BinaryTree:
     max_val = traverse(self.root, max_val)[0]
     return max_val
 
-  
+  def breadth_first(self):
+    by_layer = list()
+    line_up = Q()
+    line_up.enqueue(self.root)
+    print(f'\nline_up Queue[front]: {line_up.peek()} ')
+    while line_up.is_empty() == False:
+      curr = line_up.dequeue()
+      print(f'\n curr {curr} ')
+      if curr.left:
+        line_up.enqueue(curr.left) 
+      if curr.right:  
+        line_up.enqueue(curr.right)  
+      by_layer.append(curr.value)
+
+    return by_layer
+
 
 
 
@@ -149,8 +168,7 @@ class BinarySearchTree(BinaryTree):
       traverse(self.root, val)
       return
     
-    
-
+  
       
   
     
