@@ -70,10 +70,28 @@ class BinaryTree:
         # traverse(self.root)
         # return val
 
-        
-        
+    def breadth(self):
+        root = self.root
 
+        if root is None:
+            return
+        
+        to_print = []
+        queue = []
+        queue.append(root)
 
+        while(len(queue) > 0):
+            to_print.append(queue[0].value)
+            node = queue.pop(0)
+
+            if node.left is not None:
+                queue.append(node.left)
+            
+            if node.right is not None:
+                queue.append(node.right)
+
+        return to_print
+       
 # Create a BinarySearchTree class
 
 class BinarySearchTree(BinaryTree):
@@ -111,16 +129,43 @@ class BinarySearchTree(BinaryTree):
             else:
                 return BinarySearchTree.contains(root.left, val)
 
+
+def external_breadth(tree):
+    root = tree.root
+
+    if root is None:
+        return
+    
+    to_print = []
+    queue = []
+    queue.append(root)
+
+    while(len(queue) > 0):
+        to_print.append(queue[0].value)
+        node = queue.pop(0)
+
+        if node.left is not None:
+            queue.append(node.left)
+        
+        if node.right is not None:
+            queue.append(node.right)
+
+    return to_print
+
+
 if __name__ == '__main__':
     tree = BinaryTree()
-    tree.root = Node(50)
-    tree.root.left = Node(30)
-    tree.root.right = Node(70)
-    tree.root.left.left = Node(20)
-    tree.root.left.right = Node(40)
-    tree.root.right.right = Node(80)
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    # tree.root = Node(50)
+    # tree.root.left = Node(30)
+    # tree.root.right = Node(70)
+    # tree.root.left.left = Node(20)
+    # tree.root.left.right = Node(40)
+    # tree.root.right.right = Node(80)
     # tree.add(60)
     # print(tree.pre_order())
-    print(tree.find_maximum_value())
+    print(external_breadth(tree))
     # print(tree.contains(tree.root, 34))
 

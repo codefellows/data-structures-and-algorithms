@@ -25,3 +25,15 @@ Anthony Beaver and Karlo Mangubat
 
 ## Whiteboard
 [Link to whiteboard image](../assets/CodeChallenge16.png)
+
+# Code Challenge: Class 17
+
+## Challenge
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+## Cited source
+I did a slight variation of this example. Still wanted to cite my sources because it's pretty close to the original.
+https://www.geeksforgeeks.org/level-order-tree-traversal/
+
+## Whiteboard
+[Link to whiteboard image](../assets/CodeChallenge17.png)
