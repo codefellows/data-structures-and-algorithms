@@ -124,7 +124,8 @@ Whiteboard and initial planning with Logan Jones, Alex angelico, Sean Hawkins
   ![Challenge 16 Whiteboard](code_challenges/assets/code-challenge-16-whiteboard.png)
 
 
-
+[Challenge 17: Breadth first search PR]()
+ ![Challenge 17 Whiteboard](code_challenges/assets/code-challenge-17-whitboard.png)
 
 
 
