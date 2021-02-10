@@ -1,249 +1,89 @@
-######
-class Node:
-    def __init__(self, value = None, left = None, right = None):
+class K_node:
+    def __init__(self, value):
         self.value = value
-        self.left = left
-        self.right = right
+        self.children = []
 
-# Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
-class BinaryTree:
-    def __init__(self, root = None):
+class K_AryTree:
+    def __init__(self, root=None):
         self.root = root
-  
-    # PreOrder method
-    def pre_order(self):
-        pre_order_list = []
-        def traverse(root):
-            if not root:
-                return
-            pre_order_list.append(root.value)
-            traverse(root.left)
-            traverse(root.right)
-        traverse(self.root)
-        return pre_order_list
 
-    # In order method
-    def in_order(self):
-        in_order_list = []
-        def traverse(root):
-            if root.left:
-                traverse(root.left)
-            in_order_list.append(root.value)
-            if root.right:
-                traverse(root.right)
-        traverse(self.root)
-        return in_order_list
-
-    # In post order
-    def post_order(self):
-        post_list = []
-        def traverse(root):
-            if not root:
-                return
-            traverse(root.left)
-            traverse(root.right)
-            post_list.append(root.value)
-        traverse(self.root)
-        return post_list
-
-    
-######
-
-def FizzBuzzTree(tree):
-    # root = tree.breadth()
-    # new_tree = BinaryTree()
-    # return_tree = BinarySearchTree(new_tree)
-    # if root is None:
-    #     return
-    
-    # return_arg = []
-    # for i in root:
-    #     if (i % 3 == 0) and (i % 5 == 0):
-    #         val = 'FizzBuzz'
-    #         return_arg.append(val)
-    #     elif (i % 5 == 0):
-    #         val = 'Buzz'
-    #         return_arg.append(val)
-    #     elif (i % 3 == 0):
-    #         val = 'Fizz'
-    #         return_arg.append(val)
-    #     else:
-    #         i_str = str(i)
-    #         return_arg.append(i_str)
-    # for j in return_arg:
-    #     return_tree.add(j)
-    # return return_tree
-    
-    
-    
-    # return_array = []
-    # queue = []
-    # queue.append(root)
-    # print(queue[0].value)
-    # while(len(queue) > 0):
-    #     f_b = queue.pop(0)
-    #     print(f_b)
-    #     if (root.value % 3 == 0) and (root.value % 5 == 0):
-    #         f_b = Node('FizzBuzz')
-    #         if root.left is not None:
-    #             f_b.left = root.left
-    #             queue.append(root.left)
-    #         if root.right is not None:
-    #             f_b.right = root.right
-    #             queue.append(root.right)
-    #         print(f_b.value)
-    #         # return_tree.root = f_b
-    #         return_array.append(f_b)
-    #     elif root.value % 5 == 0:
-    #         f_b = Node('Buzz')
-    #         if root.left is not None:
-    #             f_b.left = root.left
-    #             queue.append(root.left)
-    #         if root.right is not None:
-    #             f_b.right = root.right
-    #             queue.append(root.right)
-    #         # return_tree.root = f_b
-    #         return_array.append(f_b)
-    #     elif root.value % 3 == 0:
-    #         f_b = Node('Fizz')
-    #         if root.left is not None:
-    #             f_b.left = root.left
-    #             queue.append(root.left)
-    #         if root.right is not None:
-    #             f_b.right = root.right
-    #             queue.append(root.right)
-    #         # return_tree.root = f_b
-    #         return_array.append(f_b)
-    #     else:
-    #         # return_tree.root = root
-    #         return_array.append(f_b)
-    #         queue.append(root.left)
-    #         queue.append(root.right)
-    # return return_array
-
-
-    return_tree = BinaryTree()
-    root = tree.root
-
-    def traverse(root):
-  
-        if not root:
-            return
-        print('traverse root value is:', root.value)
-        if (root.value % 3 == 0 and root.value % 5 == 0):
-            f_b = Node('FizzBuzz')
-            f_b.left = root.left
-            f_b.right = root.right
-            return_tree.root = f_b
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 5 == 0:
-            buzz = Node('Buzz')
-            buzz.left = root.left
-            buzz.right = root.right
-            return_tree.root = buzz
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 3 == 0:
-            temp = root
-            fizz = Node('Fizz')
-            fizz.left = root.left
-            fizz.right = root.right
-            return_tree.root = fizz
-            traverse_left(temp.left)
-            traverse_right(temp.right)
+    def fizz_buzz_tree(self):
+        fb_node_values = []
+        if self.root:
+            f_b_tree = K_AryTree(K_AryTree.fizz_buzz_eval(self.root))
         else:
-            return_tree.root = root
-            traverse_left(root.left)
-            traverse_right(root.right)
-    # return
-    
+            return 'Empty tree'
 
-    def traverse_left(root):
-        if not root:
-            return
+        def traverse(node):
+            fb_node_values.append(node.value)
+            child_values = []
+            new_node = K_node(node.value)
 
-        print("traverse left root val:", root.value)
-        if (root.value % 3 == 0 and root.value % 5 == 0):
-            print("left value fizzbuzz is:", root.value)
-            f_b = Node('FizzBuzz')
-            f_b.left = root.left
-            f_b.right = root.right
-            return_tree.root.left = f_b
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 5 == 0:
-            buzz = Node('Buzz')
-            buzz.left = root.left
-            buzz.right = root.right
-            return_tree.root.left = buzz
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 3 == 0:
-            fizz = Node('Fizz')
-            fizz.left = root.left
-            fizz.right = root.right
-            return_tree.root.left = fizz
-            traverse_left(root.left)
-            traverse_right(root.right)
+            for child in node.children:
+                child = K_AryTree.fizz_buzz_eval(child)
+                child_values.append(child.value)
+                traverse(child)
+
+            for i in range(len(child_values)):
+                new_node.children.append(K_node(child_values[i]))
+
+        traverse(self.root)
+        return f_b_tree, fb_node_values
+
+    @staticmethod
+    def fizz_buzz_eval(item):
+        if not item.value % 3 and not item.value % 5:
+            item.value = 'FizzBuzz'
+        elif not item.value % 3:
+            item.value = 'Fizz'
+        elif not item.value % 5:
+            item.value = 'Buzz'
         else:
-            return_tree.root.left = root
-            traverse_left(root.left)
-            traverse_right(root.right)
-    # traverse_left(root)
-        # return
+            item.value = str(item.value)
 
-    def traverse_right(root):
-        if not root:
-            return
-        print("traverse right root val:", root.value)
-        if (root.value % 3 == 0 and root.value % 5 == 0):
-            f_b = Node('FizzBuzz')
-            f_b.left = root.left
-            f_b.right = root.right
-            root.right = f_b
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 5 == 0:
-            buzz = Node('Buzz')
-            buzz.left = root.left
-            buzz.right = root.right
-            return_tree.root.right = buzz
-            traverse_left(root.left)
-            traverse_right(root.right)
-        elif root.value % 3 == 0:
-            fizz = Node('Fizz')
-            fizz.left = root.left
-            fizz.right = root.right
-            return_tree.root.right = fizz
-            traverse_left(root.left)
-            traverse_right(root.right)
-        else:
-            return_tree.root.right = root
-            traverse_left(root.left)
-            traverse_right(root.right)
-        # traverse_right(root)
-    traverse(root)
-    
-
-    return return_tree
+        return item
 
 if __name__ == '__main__':
-    tree = BinaryTree()
-    tree.root = Node(10)
-    tree.root.left = Node(6)
-    tree.root.left.left = Node(3)
-    tree.root.left.right = Node(10)
-    tree.root.right = Node(7)
-    tree.root.right.left = Node(15)
+    node_alpha = K_node(3)
+    node_bravo = K_node(4)
+    node_charlie = K_node(5)
+    node_delta = K_node(6)
+    node_echo = K_node(7)
+    node_foxtrot = K_node(8)
+    node_golf = K_node(9)
+    node_hotel = K_node(10)
+    node_india = K_node(11)
+    node_juliet = K_node(12)
+    node_kilo = K_node(13)
+    node_lima = K_node(14)
+    node_mike = K_node(15)
 
+    node_alpha.children.append(node_bravo)
+    node_alpha.children.append(node_charlie)
+    node_alpha.children.append(node_delta)
 
-    new_tree = FizzBuzzTree(tree)
+    node_bravo.children.append(node_echo)
+    node_bravo.children.append(node_foxtrot)
+    node_bravo.children.append(node_golf)
 
-    print('new tree root is:', new_tree.root.value)
-    print('new tree root left is:', new_tree.root.left.value)
-    print(new_tree.root.right.value)
-    print('new tree root left.left is:',new_tree.root.left.left.value)
-    print(new_tree.root.left.right.value)
-    print(new_tree.root.right.left.value)
-    
+    node_charlie.children.append(node_hotel)
+    node_charlie.children.append(node_india)
+    node_charlie.children.append(node_juliet)
+
+    node_delta.children.append(node_kilo)
+    node_delta.children.append(node_lima)
+    node_delta.children.append(node_mike)
+
+    test_K_tree = K_AryTree(node_alpha)
+    # print(test_K_tree.root.children[0].value)
+
+    fb_tree, fb_node_values = test_K_tree.fizz_buzz_tree()
+    print(f"""
+    {fb_tree.root.value}
+    {fb_tree.root.children[0].value} {fb_tree.root.children[1].value} {fb_tree.root.children[2].value}
+    {fb_tree.root.children[0].children[0].value} {fb_tree.root.children[0].children[1].value} {fb_tree.root.children[0].children[2].value}
+    {fb_tree.root.children[1].children[0].value} {fb_tree.root.children[1].children[1].value} {fb_tree.root.children[1].children[2].value}
+    {fb_tree.root.children[2].children[0].value} {fb_tree.root.children[2].children[1].value} {fb_tree.root.children[2].children[2].value}
+    """)
+
+    print(fb_node_values)
