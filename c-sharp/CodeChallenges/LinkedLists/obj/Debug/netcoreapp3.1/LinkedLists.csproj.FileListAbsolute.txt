@@ -1,0 +1,17 @@
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.exe
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.deps.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.runtimeconfig.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.runtimeconfig.dev.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\LinkedLists.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.csprojAssemblyReference.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.AssemblyInfoInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.AssemblyInfo.cs
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.csproj.CoreCompileInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.genruntimeconfig.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\Implementations.exe
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\Implementations.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\bin\Debug\netcoreapp3.1\Implementations.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\CodeChallenges\LinkedLists\obj\Debug\netcoreapp3.1\LinkedLists.csproj.CopyComplete

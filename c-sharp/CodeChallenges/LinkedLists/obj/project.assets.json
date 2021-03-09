@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Implementations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Implementations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Implementations.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Implementations/1.0.0": {
+      "type": "project",
+      "path": "../../DataStructures/Implementations/Implementations.csproj",
+      "msbuildProject": "../../DataStructures/Implementations/Implementations.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Implementations >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\johncokos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj",
+      "projectName": "LinkedLists",
+      "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj",
+      "packagesPath": "C:\\Users\\johncokos\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\johncokos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj": {
+              "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

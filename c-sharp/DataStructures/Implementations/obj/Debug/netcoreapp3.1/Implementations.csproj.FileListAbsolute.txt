@@ -1,0 +1,13 @@
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.exe
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.deps.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.runtimeconfig.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.runtimeconfig.dev.json
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\bin\Debug\netcoreapp3.1\Implementations.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.csprojAssemblyReference.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.AssemblyInfoInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.AssemblyInfo.cs
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.csproj.CoreCompileInputs.cache
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.dll
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.pdb
+\\Mac\Home\codefellows\data-structures-and-algorithms\dotnet\DataStructures\Implementations\obj\Debug\netcoreapp3.1\Implementations.genruntimeconfig.cache

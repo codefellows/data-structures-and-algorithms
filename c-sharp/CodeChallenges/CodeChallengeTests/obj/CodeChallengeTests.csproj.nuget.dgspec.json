@@ -1,0 +1,299 @@
+{
+  "format": 1,
+  "restore": {
+    "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\CodeChallengeTests\\CodeChallengeTests.csproj": {}
+  },
+  "projects": {
+    "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\CodeChallengeTests\\CodeChallengeTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\CodeChallengeTests\\CodeChallengeTests.csproj",
+        "projectName": "CodeChallengeTests",
+        "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\CodeChallengeTests\\CodeChallengeTests.csproj",
+        "packagesPath": "C:\\Users\\johncokos\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\CodeChallengeTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\johncokos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj": {
+                "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj"
+              },
+              "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\DataStructuresTests.csproj": {
+                "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\DataStructuresTests.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj",
+        "projectName": "LinkedLists",
+        "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\LinkedLists.csproj",
+        "packagesPath": "C:\\Users\\johncokos\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\CodeChallenges\\LinkedLists\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\johncokos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj": {
+                "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\DataStructuresTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\DataStructuresTests.csproj",
+        "projectName": "DataStructuresTests",
+        "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\DataStructuresTests.csproj",
+        "packagesPath": "C:\\Users\\johncokos\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\DataStructuresTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\johncokos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj": {
+                "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj",
+        "projectName": "Implementations",
+        "projectPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\Implementations.csproj",
+        "packagesPath": "C:\\Users\\johncokos\\.nuget\\packages\\",
+        "outputPath": "\\\\Mac\\Home\\codefellows\\guides\\data-structures-and-algorithms\\c-sharp\\DataStructures\\Implementations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\johncokos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
