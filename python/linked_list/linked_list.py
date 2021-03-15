@@ -202,13 +202,13 @@ class LinkedList:
 
         # insert after(value, newval) same as insert before but just after the value node.
 
-if __name__ == '__main__':
-    new_node = Node(1)
-    link = LinkedList()
-    link.insert_node(1)
-    link.append(10)
-    link.append(11)
-    link.insert_after(11, 5)
-    link.insert_node(3)
-    print(link)
+# if __name__ == '__main__':
+#     new_node = Node(1)
+#     link = LinkedList()
+#     link.insert_node(1)
+#     link.append(10)
+#     link.append(11)
+#     link.insert_after(11, 5)
+#     link.insert_node(3)
+#     print(link)
     
