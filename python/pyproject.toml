@@ -6,7 +6,8 @@ authors = ["JB-Tellez <jb.tellez@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-pytest = "^6.1.2"
+pytest = "^6.2.2"
+
 
 [tool.poetry.dev-dependencies]
 
