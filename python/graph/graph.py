@@ -33,7 +33,7 @@ class Graph:
         neighbor = []
         if len(home) > 0:
             for neighbors in home:
-                e_neighbor = neighbors.vertex.value
+                e_neighbor = neighbors.vertex
                 neighbor_weight = neighbors.weight
                 both = e_neighbor, neighbor_weight
                 neighbor.append(both)
@@ -48,6 +48,26 @@ class Graph:
             return 'Null'
         return count
 
+# Extend your graph object with a breadth-first traversal method that accepts a starting node. 
+# Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+    def breadth_first(self, vertex):
+        nodes = []
+        queue = []
+        visited = []
+
+        queue.append(vertex)
+        visited.append(vertex.value)
+
+        while len(queue) > 0:
+            front = queue.pop(0)
+            neighbors = self.get_neighbor(front)
+            nodes.append(front.value)
+
+            for neighbor in neighbors:
+                if neighbor[0].value not in visited:
+                    visited.append(neighbor[0].value)
+                    queue.append(neighbor[0])
+        return nodes
 
 # can replace 'Vertex' with 'Node'
 class Vertex:
@@ -58,3 +78,14 @@ class Edge:
     def __init__(self, vertex, weight=1):
         self.vertex = vertex
         self.weight = weight
+
+if __name__ == "__main__":
+    g = Graph()
+    a = g.add_node('a')
+    b = g.add_node('b')
+    c = g.add_node('c')
+    d = g.add_node('d')
+    g.add_edge(a, b)
+    g.add_edge(b, c)
+    g.add_edge(a, d)
+    print(g.breadth_first(a))

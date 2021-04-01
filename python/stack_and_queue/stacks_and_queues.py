@@ -61,7 +61,7 @@ class Queue():
         # // INPUT <-- value to add to queue (will be wrapped in Node internally)
         # // OUTPUT <-- none
         node = Node(value)
-        if not self.rear:
+        if self.front is None:
             self.front = node
             self.rear = node
         else:
@@ -77,8 +77,7 @@ class Queue():
 
         temp = self.front
         self.front = self.front.next
-        temp.next = None
-
+        # temp.next = None
         return temp.value
 
     def is_empty(self):
