@@ -9,4 +9,4 @@ I utlizied my understanding of graphs and then by using a series of loops and co
 
 ## Solution
 <!-- Embedded whiteboard image -->
-[Link to whiteboard image](../assets/codechallenge37.PNG)
+[Link to whiteboard image](../assets/codechallenge38.PNG)
