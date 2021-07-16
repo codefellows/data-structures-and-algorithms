@@ -14,19 +14,19 @@ Within the function check if the length of the array is equal to 1, if its then 
 
 Otherwise, "if" the left is less than the right do the following:
 
-Declare a variable ("p"), store the return of a function we will create later called 'partician'.
+Declare a variable ("p"), store the return of a function we will create later called 'partition'.
 
 The next two steps are to call our quicksort function recursively.
 
-- First recursive function takes the original array, the left and the partician variable subtracted by 1
+- First recursive function takes the original array, the left and the partitionn variable subtracted by 1
 
-- Second recursive function takes the original array, the partician plus 1 and the right.
+- Second recursive function takes the original array, the partitionn plus 1 and the right.
 
 The final step within the quicksort function is to return the array.
 
 > Lets take a step back and create the partitician function.
 
-Define a function named partician that takes an array, the "low" and the "high" variables.
+Define a function named partitionn that takes an array, the "low" and the "high" variables.
 
 First thing you must do is declare a variable, let's call it 'i', 'i' will equal the low variable subtracted by 1.
 
@@ -42,7 +42,7 @@ Outside our loop we do a bit of reassigning:
 
 This will move our array forward for another comparision.
 
-We are still in the partician variable and we must return something. We now return variable i plus 1
+We are still in the partitionn variable and we must return something. We now return variable i plus 1
 
 > Let's now create our swap function
 
