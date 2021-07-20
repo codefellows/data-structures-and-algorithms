@@ -30,9 +30,13 @@ jobs:
     - name: Test Data Structures
       run: |
         cd c-sharp/DataStructures/DataStructuresTests
+        dotnet restore
+        dotnet build --no-restore
         dotnet test --no-build --verbosity normal
     - name: Test Code Challenges
       run: |
-        cd c-sharp/DataStructures/CodeChallenges/Tests
+        cd c-sharp/DataStructures/CodeChallengesTests
+        dotnet restore
+        dotnet build --no-restore
         dotnet test --no-build --verbosity normal
 
