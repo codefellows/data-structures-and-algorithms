@@ -18,8 +18,29 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run:
+        cd c-sharp/DataStructures/CodeChallenges
+        dotnet restore
+        cd c-sharp/DataStructures/DataStructures
+        dotnet restore
+        cd c-sharp/DataStructures/DataStructuresTests
+        dotnet restore
+        cd c-sharp/DataStructures/CodeChallenges/Tests
+        dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run:
+        cd c-sharp/DataStructures/CodeChallenges
+        dotnet build --no-restore
+        cd c-sharp/DataStructures/DataStructures
+        dotnet build --no-restore
+        cd c-sharp/DataStructures/DataStructuresTests
+        dotnet build --no-restore
+        cd c-sharp/DataStructures/CodeChallenges/Tests
+        dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run:
+        cd c-sharp/DataStructures/DataStructuresTests
+        dotnet test --no-build --verbosity normal
+        cd c-sharp/DataStructures/CodeChallenges/Tests
+        dotnet test --no-build --verbosity normal
+
