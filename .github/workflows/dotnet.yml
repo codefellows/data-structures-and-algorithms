@@ -17,18 +17,21 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Build and Test
-      run: |
-        cd c-sharp/DataStructures/CodeChallenges
-        dotnet restore
-        dotnet build --no-restore
+    - name: Build Data Structures
       run: |
         cd c-sharp/DataStructures/DataStructures
         dotnet restore
         dotnet build --no-restore
+    - name: Build Code Challenges
+      run: |
+        cd c-sharp/DataStructures/CodeChallenges
+        dotnet restore
+        dotnet build --no-restore
+    - name: Test Data Structures
       run: |
         cd c-sharp/DataStructures/DataStructuresTests
         dotnet test --no-build --verbosity normal
+    - name: Test Code Challenges
       run: |
         cd c-sharp/DataStructures/CodeChallenges/Tests
         dotnet test --no-build --verbosity normal
