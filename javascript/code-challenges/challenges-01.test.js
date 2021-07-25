@@ -30,7 +30,7 @@ const addExclamation = (arr) => {
 
     let myArray=[];
     arr.forEach(element => {
-      myArray.push(`${element}!`)
+      myArray.push(element+"!")
     });
     return myArray;
   };
