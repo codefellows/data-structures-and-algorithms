@@ -78,7 +78,8 @@ const greeting = (word) => {
 
 const speaker = (words, callback) => {
   // Solution code here...
-  let array = [];
+  let array = []; 
+  
   words.forEach(element => {
     array.push(callback(element));
   });
