@@ -27,6 +27,7 @@ const addOne = (arr) => {
   // Solution code here...
   let array = arr.map((element) => {
     return element + 1;
+    
   });
   return array;
 };
