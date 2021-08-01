@@ -107,7 +107,7 @@ Here is an example of the input:
 [
   {name: 'Sweatshirt', price: 45},
   {name: 'Bookmark', price: 2.50},
-  {name: 'Tote bag', price: 15}
+  {name: '؛: bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
 
