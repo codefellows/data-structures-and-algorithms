@@ -10,13 +10,13 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  const reducer = arr.reduce((acc, n, i) => {
+  const reducing = arr.reduce((acc, n, i) => {
     if (n > acc) {
       acc = n;
     }
     return acc;
   }, 0);
-  return reducer;
+  return reducing;
 };
 
 /* ------------------------------------------------------------------------------------------------
