@@ -11,11 +11,11 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
+const toLastNames = (people) => {
   // Solution code here...
   let myArr=[];
-  people.map((element)=>{
-    myArr.push(element.firstName+""+element.lastName);
+  people.map((item,i)=>{
+    myArr[i]=`${item.firstName}+${item.lastName}`;
   });
   return myArr;
 };
@@ -134,10 +134,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-let myData =arr.reduce(function(a,b,index){
-  a[index]=(b.name);
-  return a; },{})
-return myData;
+let arrName =arr.reduce((accumulator,item,i)=>
+{accumulator[i]=item.name ;
+  return accumulator} , []);
+return arrName;
 };
 
 /* ------------------------------------------------------------------------------------------------
