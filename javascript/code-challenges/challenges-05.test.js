@@ -145,6 +145,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let newArray='';
+  for(let i=str.length-1;i>=0;i--){
+    newArray=newArray+str[i];
+  }
+
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
