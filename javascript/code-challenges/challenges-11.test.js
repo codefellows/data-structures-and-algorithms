@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
+Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list objs.
 
 For example: 
 {
@@ -20,10 +20,14 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  let myArr =Object.entries(obj).map((val)=>{
-return <li>${val.join(': ')}</li>;
-  });
-  return myArr;
+  let myArr = [];
+  let objA=object.entries(obj);
+    objA.map(item=>{
+    myArr.push(`<li>${obj}:${item[1]}</li>`);
+
+  })
+  return myArr ;
+
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,16 +165,18 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  let regex = /\d/g;
-  return data.filter((obj)=>{
-return !regex.test(obj.name)&& obj.name;
+  let myArr =[];
+  
+  data.map(obj =>{
+    if (obj.gender=="female"||obj.gender=="male"){
+      myArr.push(obj.name);
+    }
+  });
 
-  })
-  .map((obj)=>{
-return obj.name;
-  })
-  .join("and");
-};
+let arrJoin =myArr.join('and');
+return arrJoin;
+  };
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
@@ -185,13 +191,13 @@ data
 .map((obj)=>{
   return obj.name;
 })
-.forEach((item)=>{
-if(item.length <= blue.length){
-  blue = item;
+.forEach((obj)=>{
+if(obj.length <= blue.length){
+  blue = obj;
 }
 
 });
-return red ; 
+return blue ; 
 };
 
 /* ------------------------------------------------------------------------------------------------
