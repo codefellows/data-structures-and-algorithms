@@ -127,10 +127,12 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-let myArr=[];
+
+let newArr =[];
 let regex = /\b[A-Z](\w)*/g;
 myArr=str.match(regex);
-if (myArr==null){
+if (myArr == null){
+
   myArr=[];
 }
   return myArr;

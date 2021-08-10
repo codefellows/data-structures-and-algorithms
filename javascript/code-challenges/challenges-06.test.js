@@ -24,13 +24,11 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  let myArray=arr.map(element=>{
-let srting = element.name;
-let spAlpha = string.split('');
-let reverseAlpha=spAlpha.reverse();
-let sumAlpha=reverseAlpha.join('');
-return(sumAlpha);
+  let myArray=arr.map((element)=>{
+
+return element.name.split("").reverse().join("");
   });
+  return myArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,7 +40,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
-  let str1 = str +'The end.';
+  let str1 = `${str} The end.`;
   return str1;
 };
 
