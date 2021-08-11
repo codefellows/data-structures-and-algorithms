@@ -8,12 +8,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
-  let array = [];
-  for (let i = 0; i < array.length; i++) {
-    arr[i] = arr[i] + 2;
-    array.push(arr[i]);
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(arr[i]+2);
+
   }
-  return array;
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,11 +26,10 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-  let array =arr.filter(element =>{
-    return (typeof(element) === 'number')
+  let num = arr.filter((element)=>{
+    return (typeof(element)=== 'number');
   });
-  return array;
-
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,10 +42,10 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-  let array =arr.filter(element => {
-    return(element.include('and'))
-  })
-  return array;
+  let containsAnd = arr.filter((Value)=>{
+    return(Value.includes('and'));
+  });
+  return containsAnd;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,10 +58,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  let array = arr.filter(element=>{
-    return
-  })
-
+  let odd = arr.filter((value)=>{
+    return (value % 2 !==0);
+  });
+  return odd;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +74,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  let newArray = arr.filter(element =>{
+    return (forbiddenValues.indexOf(element)=== -1);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
