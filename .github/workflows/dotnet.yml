@@ -1,0 +1,42 @@
+name: .NET
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Build Data Structures
+      run: |
+        cd c-sharp/DataStructures/DataStructures
+        dotnet restore
+        dotnet build --no-restore
+    - name: Build Code Challenges
+      run: |
+        cd c-sharp/DataStructures/CodeChallenges
+        dotnet restore
+        dotnet build --no-restore
+    - name: Test Data Structures
+      run: |
+        cd c-sharp/DataStructures/DataStructuresTests
+        dotnet restore
+        dotnet build --no-restore
+        dotnet test --no-build --verbosity normal
+    - name: Test Code Challenges
+      run: |
+        cd c-sharp/DataStructures/CodeChallengesTests
+        dotnet restore
+        dotnet build --no-restore
+        dotnet test --no-build --verbosity normal
+
