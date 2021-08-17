@@ -30,9 +30,3 @@ def test_two_false():
     actual = multi_bracket_validation(string)
     expected = False
     assert actual == expected
-
-def test_weird_placement():
-    string = '{[}()]'
-    actual = multi_bracket_validation(string)
-    expected = True
-    assert actual == expected
