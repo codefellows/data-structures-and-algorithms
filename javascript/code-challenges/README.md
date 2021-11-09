@@ -12,7 +12,7 @@ Every code challenge file is divided into two sections: challenges and tests. Yo
 
 - Run your test from the root of the `data-structures-and-algorithms` repository, as follows
   - Run All Tests: `npm test`
-  - Run a specific test: `npm test challenge-01`
+  - Run a specific test: `npm test challenges-01`
 
 ### Continuous Testing
 
