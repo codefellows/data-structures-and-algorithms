@@ -20,10 +20,10 @@ jobs:
         java-version: '17'
     - name: Build Data Structures And Code Challenges
       run: |
-        cd java/datastructures/datastructures
+        cd java/datastructures
         ./gradlew build
     - name: Test Data Structures And Code Challenges
       run: |
-        cd java/datastructures/datastructures
+        cd java/datastructures
         ./gradlew clean test --info
 
