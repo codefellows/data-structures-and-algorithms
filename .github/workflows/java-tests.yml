@@ -1,0 +1,29 @@
+name: Java
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Java JDK 17
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Build Data Structures And Code Challenges
+      run: |
+        cd java/datastructures/datastructures
+        ./gradlew build
+    - name: Test Data Structures And Code Challenges
+      run: |
+        cd java/datastructures/datastructures
+        ./gradlew clean test --info
+
