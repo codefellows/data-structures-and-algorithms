@@ -13,11 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup Java JDK 17
+    - name: Setup Java JDK 11  # TODO: update me to 17 soon
       uses: actions/setup-java@v2
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '11'  # TODO: update me to 17 soon
     - name: Build Data Structures And Code Challenges
       run: |
         cd java/datastructures
