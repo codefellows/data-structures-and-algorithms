@@ -1,0 +1,29 @@
+name: Java
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Java JDK 11  # TODO: update me to 17 soon
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '11'  # TODO: update me to 17 soon
+    - name: Build Data Structures And Code Challenges
+      run: |
+        cd java/datastructures
+        ./gradlew build
+    - name: Test Data Structures And Code Challenges
+      run: |
+        cd java/datastructures
+        ./gradlew clean test --info
+
