@@ -1,5 +1,14 @@
 name: Run Python Tests
-on: push
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'python/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+    - 'python/**'
 
 jobs:
   ci:
