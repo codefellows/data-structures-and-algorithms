@@ -3,8 +3,12 @@ name: Java
 on:
   push:
     branches: [ main ]
+    paths:
+    - 'java/**'
   pull_request:
     branches: [ main ]
+    paths:
+    - 'java/**'
 
 jobs:
   build:
