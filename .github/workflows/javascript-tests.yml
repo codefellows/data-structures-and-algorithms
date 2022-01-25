@@ -1,6 +1,14 @@
 name: Run Javascript Tests
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'javascript/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+    - 'javascript/**'
 
 jobs:
   build:
