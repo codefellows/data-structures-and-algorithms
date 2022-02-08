@@ -1,10 +1,14 @@
-name: .NET
+name: Run .Net Tests
 
 on:
   push:
     branches: [ main ]
+    paths:
+    - 'c-sharp/**'
   pull_request:
     branches: [ main ]
+    paths:
+    - 'c-sharp/**'
 
 jobs:
   build:
