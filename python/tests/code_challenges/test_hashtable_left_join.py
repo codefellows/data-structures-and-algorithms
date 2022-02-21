@@ -1,2 +1,1 @@
-def test_missing():
-    assert False
+from code_challenges.hashtable_left_join import left_join
