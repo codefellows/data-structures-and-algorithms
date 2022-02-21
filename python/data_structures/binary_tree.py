@@ -10,3 +10,6 @@ class BinaryTree:
     def some_method(self):
         # method body here
         pass
+
+class Node:
+    pass

@@ -10,3 +10,6 @@ class Graph:
     def some_method(self):
         # method body here
         pass
+
+class Vertex:
+    pass

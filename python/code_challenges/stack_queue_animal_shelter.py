@@ -1,4 +1,4 @@
-from data_structures.Queue import Queue
+from data_structures.queue import Queue
 
 
 class AnimalShelter:
