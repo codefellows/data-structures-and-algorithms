@@ -14,6 +14,7 @@ def test_enqueue_one():
     expected = "apples"
     assert actual == expected
 
+
 @pytest.mark.skip("TODO")
 def test_enqueue_two():
     pq = PseudoQueue()
@@ -27,6 +28,7 @@ def test_enqueue_two():
     actual = pq.dequeue()
     expected = "bananas"
     assert actual == expected
+
 
 @pytest.mark.skip("TODO")
 def test_enqueue_dequeue_enqueue_dequeue():

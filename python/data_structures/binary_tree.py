@@ -11,5 +11,6 @@ class BinaryTree:
         # method body here
         pass
 
+
 class Node:
     pass

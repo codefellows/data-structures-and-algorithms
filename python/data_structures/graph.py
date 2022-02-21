@@ -11,5 +11,6 @@ class Graph:
         # method body here
         pass
 
+
 class Vertex:
     pass

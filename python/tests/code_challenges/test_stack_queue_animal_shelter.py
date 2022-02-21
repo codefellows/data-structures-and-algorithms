@@ -11,6 +11,7 @@ def test_single_cat():
     expected = cat
     assert actual == expected
 
+
 @pytest.mark.skip("TODO")
 def test_single_dog():
     shelter = AnimalShelter()
@@ -19,6 +20,7 @@ def test_single_dog():
     actual = shelter.dequeue("dog")
     expected = dog
     assert actual == expected
+
 
 @pytest.mark.skip("TODO")
 def test_dog_preferred_but_cat_in_front():
@@ -31,6 +33,7 @@ def test_dog_preferred_but_cat_in_front():
     expected = dog
     assert actual == expected
 
+
 @pytest.mark.skip("TODO")
 def test_dog_then_cat():
     shelter = AnimalShelter()
@@ -42,6 +45,7 @@ def test_dog_then_cat():
     actual = shelter.dequeue("cat")
     expected = cat
     assert actual == expected
+
 
 @pytest.mark.skip("TODO")
 def test_bad_pref():
