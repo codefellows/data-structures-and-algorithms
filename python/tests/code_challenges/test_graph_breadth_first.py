@@ -1,15 +1,19 @@
 import pytest
 from data_structures.graph import Graph
 
-
 def test_exists():
     assert Graph
 
 @pytest.mark.skip("TODO")
 def test_bfs(graph):
-    actual = graph.breadth_first(graph.get_nodes[0])
-    expected = ["a","b","c","d","e","f","g","h","i","j"]
+    nodes = graph.get_nodes()
+    root = nodes[0]
+    print(root.value)
+    actual = graph.breadth_first(root)
+    expected = ["Pandora","Arendelle","Metroville","Monstropolis","Narnia","Naboo"]
     assert actual == expected
+
+    # DANGER: Metroville/Monstropolis could be switched as well as Narnia/Naboo and still be valid BFS. What to do?
 
 
 
@@ -17,53 +21,34 @@ def test_bfs(graph):
 @pytest.fixture
 def graph():
 
-    letters = Graph()
+    realms = Graph()
 
-    a = letters.add_node("a")
-    b = letters.add_node("b")
-    c = letters.add_node("c")
-    d = letters.add_node("d")
-    e = letters.add_node("e")
-    f = letters.add_node("f")
-    g = letters.add_node("g")
-    h = letters.add_node("h")
-    i = letters.add_node("i")
-    j = letters.add_node("j")
+    pandora = realms.add_node("Pandora")
+    arendelle = realms.add_node("Arendelle")
+    metroville = realms.add_node("Metroville")
+    monstropolis = realms.add_node("Monstropolis")
+    narnia = realms.add_node("Narnia")
+    naboo = realms.add_node("Naboo")
 
-    letters.add_edge(a, b)
-    letters.add_edge(a, c)
-    letters.add_edge(a, e)
+    realms.add_edge(pandora, arendelle)
 
-    letters.add_edge(b, a)
-    letters.add_edge(b, d)
+    realms.add_edge(arendelle, pandora)
+    realms.add_edge(arendelle, metroville)
+    realms.add_edge(arendelle, monstropolis)
 
-    letters.add_edge(c, a)
-    letters.add_edge(c, f)
+    realms.add_edge(metroville, arendelle)
+    realms.add_edge(metroville, monstropolis)
+    realms.add_edge(metroville, narnia)
 
-    letters.add_edge(d, b)
-    letters.add_edge(d, e)
+    realms.add_edge(monstropolis, arendelle)
+    realms.add_edge(monstropolis, metroville)
+    realms.add_edge(monstropolis, naboo)
 
+    realms.add_edge(narnia, metroville)
+    realms.add_edge(narnia, naboo)
 
-    letters.add_edge(e, a)
-    letters.add_edge(e, d)
-    letters.add_edge(e, f)
-    letters.add_edge(e, g)
+    realms.add_edge(naboo, metroville)
+    realms.add_edge(naboo, monstropolis)
+    realms.add_edge(naboo, narnia)
 
-    letters.add_edge(f, c)
-    letters.add_edge(f, g)
-    letters.add_edge(f, h)
-
-    letters.add_edge(g, e)
-    letters.add_edge(g, h)
-
-    letters.add_edge(h, f)
-    letters.add_edge(h, g)
-    letters.add_edge(h, j)
-
-    letters.add_edge(i, f)
-    letters.add_edge(i, j)
-
-    letters.add_edge(j, h)
-    letters.add_edge(j, i)
-
-    return letters
+    return realms
