@@ -1,4 +1,5 @@
 import pytest
+from data_structures.binary_tree import BinaryTree, Node
 from code_challenges.tree_breadth_first import breadth_first
 
 
@@ -69,14 +70,14 @@ def test_example_from_reading():
     """
     tree = BinaryTree()
 
-    level_3_2 = _Node(2)
-    level_3_6 = _Node(6, _Node(5), _Node(11))
-    level_3_9 = _Node(9, _Node(4))
+    level_3_2 = Node(2)
+    level_3_6 = Node(6, Node(5), Node(11))
+    level_3_9 = Node(9, Node(4))
 
-    level_2_left = _Node(7, level_3_2, level_3_6)
-    level_2_right = _Node(5, right=level_3_9)
+    level_2_left = Node(7, level_3_2, level_3_6)
+    level_2_right = Node(5, right=level_3_9)
 
-    tree._root = _Node(2, level_2_left, level_2_right)
+    tree._root = Node(2, level_2_left, level_2_right)
 
     expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
     actual = BinaryTree.breadth_first(tree)

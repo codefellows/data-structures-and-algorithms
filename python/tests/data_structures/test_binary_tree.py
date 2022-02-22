@@ -47,4 +47,5 @@ def tree():
     tree.root.left.right = Node("e")
     tree.root.right.left = Node("f")
     tree.root.right.right = Node("g")
+
     return tree
