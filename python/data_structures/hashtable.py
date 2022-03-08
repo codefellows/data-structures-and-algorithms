@@ -1,4 +1,4 @@
-class LinkedList:
+class Hashtable:
     """
     Put docstring here
     """
