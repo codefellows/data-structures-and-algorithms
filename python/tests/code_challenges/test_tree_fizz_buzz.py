@@ -1,7 +1,8 @@
 import pytest
-from code_challenges.tree_fizz_buzz import fizz_buzz_tree
+from code_challenges.tree_fizz_buzz import fizz_buzz_tree, KaryTree, Node
 
 
+@pytest.mark.skip("TODO")
 def test_exists():
     assert fizz_buzz_tree
 
