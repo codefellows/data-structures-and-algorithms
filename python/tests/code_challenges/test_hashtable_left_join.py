@@ -27,7 +27,7 @@ def test_example():
         ["fond", "enamored", "averse"],
         ["wrath", "anger", "delight"],
         ["diligent", "employed", "idle"],
-        ["outfit", "garb", NONE],
+        ["outfit", "garb", "NONE"],
         ["guide", "usher", "follow"],
     ]
 
