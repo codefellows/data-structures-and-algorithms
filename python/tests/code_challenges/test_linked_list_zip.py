@@ -10,7 +10,7 @@ def test_exists():
 @pytest.mark.skip("TODO")
 def test_even_length():
     list_a = LinkedList()
-    for value in reversed([3, 2, 1]):
+    for value in reversed([1, 2, 3]):
         list_a.insert(value)
 
     list_b = LinkedList()
@@ -22,7 +22,7 @@ def test_even_length():
     for value in reversed([1, "a", 2, "b", 3, "c"]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
 @pytest.mark.skip("TODO")
@@ -40,7 +40,7 @@ def test_a_shorter():
     for value in reversed([1, "a", 2, "b", "c"]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
 @pytest.mark.skip("TODO")
@@ -55,10 +55,10 @@ def test_b_shorter():
 
     actual = zip_lists(list_a, list_b)
     expected = LinkedList()
-    for value in reversed([1, "a", 2, "b", 3, "c"]):
+    for value in reversed([1, "a", 2, "b", 3]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
 @pytest.mark.skip("TODO")
@@ -72,7 +72,7 @@ def test_a_empty():
     expected = LinkedList()
     for value in reversed(["a", "b", "c"]):
         expected.insert(value)
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
 @pytest.mark.skip("TODO")
