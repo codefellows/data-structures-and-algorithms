@@ -7,25 +7,25 @@ def test_exists():
 
 
 @pytest.mark.skip("TODO")
-def test_pre_order(tiny):
+def test_pre_order(tree):
     actual = []
-    tiny.pre_order(actual.append)
+    tree.pre_order(actual.append)
     expected = ["a", "b", "d", "e", "c", "f", "g"]
     assert actual == expected
 
 
 @pytest.mark.skip("TODO")
-def test_in_order(tiny):
+def test_in_order(tree):
     actual = []
-    tiny.in_order(actual.append)
+    tree.in_order(actual.append)
     expected = ["d", "b", "e", "a", "f", "c", "g"]
     assert actual == expected
 
 
 @pytest.mark.skip("TODO")
-def test_post_order(tiny):
+def test_post_order(tree):
     actual = []
-    tiny.post_order(actual.append)
+    tree.post_order(actual.append)
     expected = ["d", "e", "b", "f", "g", "c", "a"]
     assert actual == expected
 
