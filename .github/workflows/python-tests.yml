@@ -1,4 +1,4 @@
-name: Project Tests
+name: Run Python Tests
 on:
   push:
     branches:
