@@ -2,11 +2,12 @@ import pytest
 from data_structures.binary_tree import BinaryTree, Node
 
 
+@pytest.mark.skip("TODO")
 def test_exists():
     assert BinaryTree
 
 
-
+@pytest.mark.skip("TODO")
 def test_pre_order(tree):
     actual = tree.pre_order()
     expected = ["a", "b", "d", "e", "c", "f", "g"]
