@@ -2,6 +2,11 @@
 
 ## Language: `Python`
 
+## Repository Directory
+
+- [Array Reverse Challenge](python/code_challenges/array-reverse/README.md)
+- [Array Insert Challenge](python/code_challenges/array-insert-shift/README.md)
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
