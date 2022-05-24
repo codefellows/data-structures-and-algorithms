@@ -6,8 +6,6 @@ We are taking in an array and a target value and using a binary search to return
 
 Some order can be assumed for the array since it is sorted. You need to grab a specific area within the array and compare it to what you are looking for.
 
-![See my work here](python/code_challenges/array-binary-search/CodeChallenge3.png)
-
-**Need to
+![See my work here](/python/code_challenges/array-binary-search/CodeChallenge3.png)
 
 To go back to the main ReadMe [Click Here](../../README.md)
