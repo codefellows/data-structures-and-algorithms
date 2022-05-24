@@ -6,6 +6,7 @@
 
 - [Array Reverse Challenge](python/code_challenges/array-reverse/README.md)
 - [Array Insert Challenge](python/code_challenges/array-insert-shift/README.md)
+- [Array Binary Search](python/code_challenges/array-binary-search/README.md)
 
 ### Folder and Challenge Setup
 
