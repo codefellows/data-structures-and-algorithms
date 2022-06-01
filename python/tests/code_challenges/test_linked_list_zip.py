@@ -1,8 +1,8 @@
 import pytest
 from code_challenges.linked_list_zip import zip_lists
-from data_structures.linked_list import LinkedList
+from data_structures.linked_list.linked_list import LinkedList
 
-
+@pytest.mark.skip("TODO")
 def test_exists():
     assert zip_lists
 

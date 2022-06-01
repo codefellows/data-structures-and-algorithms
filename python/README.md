@@ -7,6 +7,7 @@
 - [Array Reverse Challenge](python/code_challenges/array-reverse/README.md)
 - [Array Insert Challenge](python/code_challenges/array-insert-shift/README.md)
 - [Array Binary Search](python/code_challenges/array-binary-search/README.md)
+- [Linked Lists Part 1](python/data_structures/linked_list/README.md)
 
 ### Folder and Challenge Setup
 
