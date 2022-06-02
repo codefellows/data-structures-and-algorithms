@@ -46,17 +46,21 @@ class LinkedList():
         # Apparently else works with while for an alternative to if the condition in the while loop is not met and the loop exhausts its paths.
         # This should return the other side of the boolean once current runs out of items in the list.
 
-    def str(self):
+    def __str__(self):
         # This function should RETURN a string representing all the values in the Linked List
         # Self counts as no arguments because it is a method on its-SELF
+        # This is a string method  - like the dunder str and dunder repr from before (__str__)
+        # This is the client facing string that shows if you just PRINT the class, no need to call with the dunder stuff.
+        # The __repr__ is the dev facing piece. This is called with the repr dunder tags
         returned_string = ""
         current = self.head
         while current:
-            returned_string += f"{ {current.value} } -> "
+            returned_string += "{ " + current.value + " } -> "
             current = current.next
 
-        returned_string += "NULL"
-        # returned_string.strip('\'') #!)@(*$@*#($#@*$@#(@)$(*#@($*#@))))
+        returned_string += "None"
+        # None is the Null of python - you can update the test to match.
+        # returned_string.strip('\'')
         return returned_string
 
 
@@ -86,4 +90,4 @@ if __name__ == '__main__':
     # print(linked_list.includes("apple"))
     # print(linked_list.includes("cucumber"))
 
-    print(linked_list.str().strip('\''))
+    print(linked_list)
