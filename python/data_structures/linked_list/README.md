@@ -16,3 +16,5 @@ Str method to create a string from the values in the linked list.
 Worked with Sergii on the file structure.
 TutorialsPoint shows that else can be used with while for the includes module.
 https://ao.ms/convert-a-linkedlist-to-a-string-in-python/ (for help with what is described in the url)
+
+
