@@ -22,3 +22,5 @@ In this lab I was unable to get the tests working on my machine, but we ran the 
 
 # Whiteboard
 ![See my work here](/python/code_challenges/linked_list_insertions/CC6WB.drawio.png)
+
+To go back to the main ReadMe [Click Here](../../README.md)
