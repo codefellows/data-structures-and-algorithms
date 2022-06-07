@@ -18,9 +18,13 @@ The raw whiteboard can be found here: https://drive.google.com/file/d/1zLICG47Ay
 https://www.bigocheatsheet.com/
 https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
 
-In this lab I was unable to get the tests working on my machine, but we ran the tests on Brian's machine and got the three target methods of the lab working.
+In this lab I was unable to get the tests working on my machine, but we ran the tests on Brian's machine and got the three target methods of the lab working. Since I could not get the tests working I have not yet written unit tests or TargetError handling yet.
 
 # Whiteboard
+For the Summary, Description, Approach & Efficiency, Solution, please see the whiteboard below:
 ![See my work here](/python/code_challenges/linked_list_insertions/CC6WB.drawio.png)
+
+# Code
+[See the Code](python/code_challenges/linked_list_insertions/linked_list.py), [See the test file](python/code_challenges/linked_list_insertions/test_linked_list_insertions.py)
 
 To go back to the main ReadMe [Click Here](../../README.md)
