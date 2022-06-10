@@ -144,17 +144,12 @@ class LinkedList():
 
 
 class TargetError(Exception):
-    def __init__(self, *args):
-        if args:
-            self.message = args[0]
-        else:
-            self.message = None
+    def __init__(self):
+        self.message = "Error"
 
     def __str__(self):
-        if self.message:
-            return 'TargetError, {0}'.format(self.message)
-        else:
-            return 'TargetError has been raised'
+        return self.message
+
 
 
 if __name__ == '__main__':
