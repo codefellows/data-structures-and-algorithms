@@ -58,7 +58,7 @@ class LinkedList():
             returned_string += "{ " + current.value + " } -> "
             current = current.next
 
-        returned_string += "Null"
+        returned_string += "NULL"
         # None is the Null of python - you can update the test to match.
         # returned_string.strip('\'')
         return returned_string

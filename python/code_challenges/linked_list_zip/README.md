@@ -13,6 +13,7 @@ zip_lists is the function that zips the two lists together
 # Resources
 Worked with Marni on the whiteboard and on writing the code for this challenge.
 The raw whiteboard can be found here: https://jaimierl494930.invisionapp.com/freehand/Untitled-8JEeB2GyD
+Worked with the class solution to get the code wired up and working.
 
 # Whiteboard
 For the Summary, Description, Approach & Efficiency, Solution, please see the whiteboard below:
