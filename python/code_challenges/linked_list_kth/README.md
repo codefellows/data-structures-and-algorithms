@@ -23,6 +23,6 @@ For the Summary, Description, Approach & Efficiency, Solution, please see the wh
 ![See my work here](/python/code_challenges/linked_list_kth/CCWB7.drawio.png)
 
 # Code
-[See the Code](python/code_challenges/linked_list_kth/linked_list.py), [See the test file](python/code_challenges/linked_list_insertions/test_linked_list_lth.py)
+[See the Code](python/code_challenges/linked_list_kth/linked_list.py), [See the test file](python/code_challenges/linked_list_kth/test_linked_list_kth.py)
 
 To go back to the main ReadMe [Click Here](../../README.md)

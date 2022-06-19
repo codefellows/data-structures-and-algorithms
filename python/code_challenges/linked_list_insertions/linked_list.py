@@ -1,6 +1,3 @@
-from asyncio.windows_events import NULL
-
-
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -61,53 +58,64 @@ class LinkedList():
             returned_string += "{ " + current.value + " } -> "
             current = current.next
 
-        returned_string += "Null"
+        returned_string += "NULL"
         # None is the Null of python - you can update the test to match.
         # returned_string.strip('\'')
         return returned_string
 
     def append(self, new_value):
-        current = self.head
-        while current.next:
-            current = current.next
-            # This is to say if there is a current value we move to the next thing in the list
-        else:
-            new_node = Node(new_value)
-            current.next = new_node
+        try:
+            current = self.head
+            while current.next:
+                current = current.next
+                # This is to say if there is a current value we move to the next thing in the list
+            else:
+                new_node = Node(new_value)
+                current.next = new_node
+        except:
+            raise TargetError
 
     def insert_before(self, old_value, new_value):
-        current = self.head
-        if self.includes(new_value):
-            while current:
-                if current.value == old_value:
-                    self.insert(new_value )
+        try:
+            current = self.head
+            if self.includes(new_value):
+                while current:
+                    if current.value == old_value:
+                        self.insert(new_value )
 
-                elif current.next.value == old_value:
-                    new_node = Node(new_value, current.next)
+                    elif current.next.value == old_value:
+                        new_node = Node(new_value, current.next)
+                        current.next = new_node
                     current.next = new_node
-                current.next = new_node
-
-        # else: raiseTargetError
+        except:
+            raise TargetError
 
     def insert_after(self, old_value, new_value):
-        current = self.head
-        print(self, old_value, new_value)
+        try:
+            current = self.head
+            print(self, old_value, new_value)
 
-        while current.value is old_value:
-            # If we find our value in question as the next value
-            new_node = Node(new_value)
-            # Make a new node
-            new_node.next = current.next
-            # Set the new node next to the current current.next
-            current.next = new_node
-            # reset the current nodes next to the new node
-            current = current.next
-            # Move to the next node
-        else:
-            current = current.next
+            while current.value is old_value:
+                # If we find our value in question as the next value
+                new_node = Node(new_value)
+                # Make a new node
+                new_node.next = current.next
+                # Set the new node next to the current current.next
+                current.next = new_node
+                # reset the current nodes next to the new node
+                current = current.next
+                # Move to the next node
+            else:
+                current = current.next
+        except:
+            raise TargetError
 
-class TargetError:
-    pass
+class TargetError(Exception):
+    def __init__(self)->None:
+        self.message = "Error"
+
+    def __str__(self):
+        return self.message
 
 if __name__ == '__main__':
     # ll = LinkedList()

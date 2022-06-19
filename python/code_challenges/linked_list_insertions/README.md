@@ -2,15 +2,15 @@
 A challenge of adding three singly linked list insertion methods to the previously written linked list functionality.
 
 ## Challenge
-Create includes, insert, and to_string methods as well as tests pass the tests in the data_structures folder for said methods.
+Create append, insert-before and insert-after methods as well as tests pass the tests in the data_structures folder for said methods.
 
 ## Approach & Efficiency
 The Approach was to use while loops to traverse the linked lists. This is O(N)
 
 ## API
-Insert Method to insert something into the linked list.
-Includes method to return a boolean of whether something is in the list.
-Str method to create a string from the values in the linked list.
+Append Method to insert something to the end of the linked list.
+Insert-before method to insert a new value before a certain value in the list.
+Insert-after method to insert a new value after a certain value in the list.
 
 # Resources
 Worked with Brian on the whiteboard and on writing the code for this challenge.

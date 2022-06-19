@@ -58,7 +58,7 @@ class LinkedList():
             returned_string += "{ " + current.value + " } -> "
             current = current.next
 
-        returned_string += "Null"
+        returned_string += "NULL"
         # None is the Null of python - you can update the test to match.
         # returned_string.strip('\'')
         return returned_string
@@ -73,6 +73,8 @@ class LinkedList():
             current.next = new_node
 
     def insert_before(self, old_value, new_value):
+        if self.includes(old_value) is False:
+            raise TargetError
         current = self.head
         if self.includes(new_value):
             while current:
@@ -84,9 +86,12 @@ class LinkedList():
                     current.next = new_node
                 current.next = new_node
 
-        # else: raiseTargetError
+
 
     def insert_after(self, old_value, new_value):
+        if self.includes(old_value) is False:
+            raise TargetError
+
         current = self.head
         print(self, old_value, new_value)
 
@@ -144,7 +149,7 @@ class LinkedList():
 
 
 class TargetError(Exception):
-    def __init__(self):
+    def __init__(self)->None:
         self.message = "Error"
 
     def __str__(self):
