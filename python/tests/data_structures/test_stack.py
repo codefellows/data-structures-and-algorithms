@@ -1,13 +1,28 @@
 import pytest
+from data_structures.node import Node
 from data_structures.stack import Stack
 from data_structures.invalid_operation_error import InvalidOperationError
+
+
+def test_node_exists():
+    assert Node
+
+#@pytest.mark.skip("TODO")
+def test_create_node():
+    node1 = Node(5)
+    assert node1.value == 5
+
+#@pytest.mark.skip("TODO")
+def test_create_node_not_pass():
+    node1 = Node(5)
+    assert node1.value != 6
 
 
 def test_exists():
     assert Stack
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_push_onto_empty():
     s = Stack()
     s.push("apple")
@@ -16,7 +31,7 @@ def test_push_onto_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_push_onto_full():
     s = Stack()
     s.push("apple")
@@ -27,7 +42,7 @@ def test_push_onto_full():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_pop_single():
     s = Stack()
     s.push("apple")
@@ -36,7 +51,7 @@ def test_pop_single():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_pop_some():
     s = Stack()
 
@@ -52,7 +67,7 @@ def test_pop_some():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_pop_until_empty():
     s = Stack()
     s.push("apple")
@@ -66,7 +81,7 @@ def test_pop_until_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_peek():
     s = Stack()
     s.push("apple")
@@ -76,7 +91,7 @@ def test_peek():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_peek_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
@@ -85,7 +100,7 @@ def test_peek_empty():
     assert str(e.value) == "Method not allowed on empty collection"
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_pop_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
