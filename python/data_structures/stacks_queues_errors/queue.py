@@ -19,18 +19,15 @@ class Queue:
             #If there are no items in the list the first is the front.
         if self.rear:
             self.rear.next = node
+
+
         self.rear = node
+            #This runs in either case
+            #If we are putting something into the list line 22 is setting something to the front and to the rear. Look at the spacing. This happens in both cases and runs outside of the second if statement.
+            # Not every if needs an else in python.
 
         # Why is it that we do not need to set the next of the front to the first rear for this to work? Based on the way this is currently it seems like the front would be detached from the rest of the queue
-
-        # else:
-            # if self.rear is None:
-            #     self.rear = node
-            #     self.front.next = self.rear
-            #     #If there is just one item in the queue (front) then its next is the rear
-            # elif self.rear is not None:
-            #     self.rear.next = node
-            #     #If there is a rear value then we are setting its next to this new value.
+        # The last line is setting whatever we put into the stack as the rear. Thus is there is only one item going in it will be both the front and the rear.
 
 
     def dequeue(self):

@@ -4,14 +4,14 @@
 
 ## Repository Directory
 
-- [Array Reverse Challenge](/python/code_challenges/array-reverse/README.md)
-- [Array Insert Challenge](/python/code_challenges/array-insert-shift/README.md)
-- [Array Binary Search](/python/code_challenges/array-binary-search/README.md)
+- [Array Reverse Challenge](/code_challenges/array-reverse/README.md)
+- [Array Insert Challenge](/code_challenges/array-insert-shift/README.md)
+- [Array Binary Search](/code_challenges/array-binary-search/README.md)
 - [Linked Lists Part 1](/data_structures/linked_list/README.md)
 - [Linked Lists Insertions](/code_challenges/linked_list_insertions/README.md)
 - [Linked Lists Finding Values](/code_challenges/linked_list_kth/README.md)
 - [Linked Lists Finding Zip](/python/code_challenges/linked_list_zip/README.md)
-- [Stacks and Queues - First Implementation](python/data_structures/ReadStacksQueues.md)
+- [Stacks and Queues - First Implementation](/data_structures/stacks_queues_errors/ReadStacksQueues.md)
 
 ### Folder and Challenge Setup
 

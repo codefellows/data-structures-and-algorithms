@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.stack_queue_pseudo import PseudoQueue
+from stack_queue_pseudo import PseudoQueue
 
 
 def test_exists():
@@ -45,4 +45,11 @@ def test_enqueue_dequeue_enqueue_dequeue():
 
     expected = ["bananas", "cucumbers", "dates"]
 
+    assert actual == expected
+
+def test_dequeue_single():
+    s = PseudoQueue()
+    s.push("apple")
+    actual = s.pop()
+    expected = "apple"
     assert actual == expected

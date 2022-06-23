@@ -1,7 +1,7 @@
 import pytest
-from data_structures.node import Node
-from data_structures.stack import Stack
-from data_structures.invalid_operation_error import InvalidOperationError
+from .node import Node
+from .stack import Stack
+from .invalid_operation_error import InvalidOperationError
 
 
 def test_node_exists():

@@ -1,10 +1,8 @@
 # Stacks and Queues Implementation
 
-A challenge of creating classes for Nodes, Stacks and Queues
-
 ## Challenge
 
-Implement push, pop, peak, and is_empty methods for stacks and enqueue, dequeue, peak and is_empty methods for queues.
+Implement a queue using two stacks
 
 ## API
 
@@ -32,17 +30,23 @@ enqueue
 Arguments: value
 adds a new node with that value to the back of the queue with an O(1) Time performance.
 
+In this case we are putting the new argument into the bottom of the stack.
+
 dequeue
 Arguments: none
 Returns: the value from node from the front of the queue
 Removes the node from the front of the queue
 Should raise exception when called on empty queue
 
+In this case it should pop the item on top of the stack.
+
+Note - if the folders are named with dashes then the import statements will just not work. Note for self. Names of folders need to be in snake case.
+
 # Resources
 
-TutorialsPoint shows that else can be used with while for the includes module.
-https://ao.ms/convert-a-linkedlist-to-a-string-in-python/ (for help with what is described in the url)
-https://favtutor.com/blogs/doubly-linked-list-python was used as a basis for doubly linked list code.
+See the whiteboard ![Here!](/python/code_challenges/stack-queue-pseudo/CC11.png)
 
-Worked with Brian, Aoife, Sergii, and Brendon to polish the enqueue function and pass the final test.
-See the code for [Nodes](data_structures/node.py), [Stacks](data_structures/stack.py), and [Queues](data_structures/queue.py) by clicking on the highlighted words!
+
+See the code for [The Pseudo Queue](/code_challenges/stack-queue-pseudo/stack_queue_pseudo.py), or the [Tests](/code_challenges/stack-queue-pseudo/test_stack_queue_pseudo.py) by clicking on the highlighted words!
+
+To go back to the main ReadMe [Click Here](../../README.md)

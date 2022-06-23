@@ -6,7 +6,7 @@ class PseudoQueue():
     The pseudo-queue class where we will use stacks to mimic queues.
     """
 
-    def __init__(self, value, next=None):
+    def __init__(self, value=None, next=None):
         self.original = Stack()
         self.new = Stack()
         self.value = value
