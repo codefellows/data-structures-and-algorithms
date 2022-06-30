@@ -1,7 +1,7 @@
 import pytest
-from data_structures.node import Node
-from data_structures.queue import Queue
-from data_structures.invalid_operation_error import InvalidOperationError
+from .node import Node
+from .queue import Queue
+from .invalid_operation_error import InvalidOperationError
 
 #@pytest.mark.skip("TODO")
 def test_node_exists():

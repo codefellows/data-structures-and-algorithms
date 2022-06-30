@@ -1,6 +1,10 @@
-from .queue import Queue
+from .node import Node
+from .invalid_operation_error import InvalidOperationError
 
-class AnimalShelter:
+class Queue:
+    """
+    The queue class
+    """
 
     def __init__(self, front=None, rear = None):
         self.front = front
@@ -26,26 +30,32 @@ class AnimalShelter:
         # The last line is setting whatever we put into the stack as the rear. Thus is there is only one item going in it will be both the front and the rear.
 
 
-    def dequeue(self, perf):
+    def dequeue(self):
         """Arguments: none
         Returns: the value from node from the front of the queue
         Removes the node from the front of the queue
         Should raise exception when called on empty queue"""
-        if perf is not "cat" or "dog":
-            return None
         if self.front:
             front_value = self.front.value
             self.front = self.front.next
             return front_value
+        else:
+            raise InvalidOperationError
 
+    def peek(self):
+        """Arguments: none
+        Returns: Value of the node located at the top of the stack or the front of the queue
+        Should raise exception when called on empty stack"""
+        if self.front:
+            return self.front.value
+        else:
+            raise InvalidOperationError
 
-class Dog:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
-
-
-class Cat:
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next = next
+    def is_empty(self):
+        """Arguments: none
+        Returns: Boolean indicating whether or not the stack or queue is empty."""
+        if self.front == None:
+            # print(self.front, self.rear)
+            return True
+        # else:
+        #     return False

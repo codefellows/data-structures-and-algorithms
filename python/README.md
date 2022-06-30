@@ -12,6 +12,9 @@
 - [Linked Lists Finding Values](/code_challenges/linked_list_kth/README.md)
 - [Linked Lists Finding Zip](/python/code_challenges/linked_list_zip/README.md)
 - [Stacks and Queues - First Implementation](/data_structures/stacks_queues_errors/ReadStacksQueues.md)
+- [Stacks and Queues - Animal Shelter](/code_challenges/animal-shelter/README.md)
+- [Stacks and Queues - Bracket Validation](/code_challenges/stack-queue-brackets/README.md)
+
 
 ### Folder and Challenge Setup
 
