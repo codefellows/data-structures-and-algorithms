@@ -28,7 +28,7 @@ class AnimalShelter:
         # The last line is setting whatever we put into the stack as the rear. Thus is there is only one item going in it will be both the front and the rear.
 
 
-    def dequeue(self, pref):
+    def dequeue(self, pref=None):
         """Arguments: none
         Returns: the value from node from the front of the queue
         Removes the node from the front of the queue
@@ -39,6 +39,14 @@ class AnimalShelter:
             return prev_front
     #     if pref in self.pets:
     #         self.re_enqueue(pref)
+            # Attempt to put the oldest animal in the back of the queue until you get to the animal that is wanted.
+        if pref not in self.pets:
+            return None
+        if pref is None:
+            prev_front = self.front
+            self.front = self.front.next
+            return prev_front
+            #Stretch goal to return the oldest animal if no preference given.
 
     # def re_enqueue(self, pref):
     #     reverse = self.front
