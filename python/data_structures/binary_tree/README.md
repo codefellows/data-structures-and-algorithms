@@ -34,7 +34,7 @@ This class should be a sub-class of the Binary Tree Class, with the following ad
   Returns: boolean indicating whether or not the value is in the tree at least once.
 
 # Resources
-Worked with Brendon Hampton
+Worked with Brendon, JJ, and Aoife.
 
 See the code for [The Binary Tree](/data_structures/binary_tree/binary_tree.py) or [Binary Search Tree](/data-structures-and-algorithms-401/python/data_structures/binary_tree/binary_search_tree.py), or the [Binary Tree Tests](/data_structures/binary_tree/test_binary_tree.py) or [Binary Search Tree Tests](/data_structures/binary_tree/test_binary_search_tree.py) by clicking on the highlighted words!
 
