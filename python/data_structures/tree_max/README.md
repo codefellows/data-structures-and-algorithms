@@ -23,6 +23,8 @@ Should be able to take in negative numbers. The tree will only include integers.
 
 See the code for [The Binary Tree](/data_structures/tree_max/binary_tree.py) or the [Binary Tree Tests](/data_structures/tree_max/test_tree_max.py) by clicking on the highlighted words!
 
+See the whiteboard ![Here!](/python/data_structures/tree_max/CC16.png)
+
 Note to self - if you are having an import error for the tests:
 - make sure there is an __init__.py file
 - Make sure the folder name has UNDERSCORES and NOT dashes
