@@ -1,14 +1,14 @@
 import pytest
-from data_structures.binary_tree import BinaryTree, Node
-from code_challenges.tree_breadth_first import breadth_first
+from .binary_tree import BinaryTree, Node
+from .tree_breadth_first import breadth_first
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_exists():
     assert breadth_first
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_rootless_tree():
     tree = BinaryTree()
     expected = []
@@ -16,7 +16,7 @@ def test_rootless_tree():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_single_node():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -25,7 +25,7 @@ def test_single_node():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_two_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -35,7 +35,7 @@ def test_two_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_four_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -47,7 +47,7 @@ def test_four_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_example_from_reading():
     """
     We build these out by hand because the example has some gaps

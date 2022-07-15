@@ -1,5 +1,5 @@
 from .node import Node
-from data_structures.invalid_operation_error import InvalidOperationError
+from .invalid_operation_error import InvalidOperationError
 
 class Queue:
     """

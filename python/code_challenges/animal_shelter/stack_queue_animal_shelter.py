@@ -40,6 +40,19 @@ class AnimalShelter:
     #     if pref in self.pets:
     #         self.re_enqueue(pref)
             # Attempt to put the oldest animal in the back of the queue until you get to the animal that is wanted.
+        if pref in self.pets:
+            if self.peek() == pref:
+                #This may still need self.peek.value
+                return self.front.value
+            else:
+                animal = self.dequeue()
+                self.enqueue(animal)
+                #This takes whatever is currently in the front (and not pref) and puts it in the back.
+
+                # prev_front = self.front
+                # self.front = self.front.next
+                # self.enqueue(prev_front)
+
         if pref not in self.pets:
             return None
         if pref is None:
@@ -55,13 +68,73 @@ class AnimalShelter:
     #     self.dequeue(pref)
     #     #This should dequeue the front value and enqueue it to the back of the list.
 
+# btw - the solution you were going for is very efficient in terms of space, but inefficient for time. There's another common solution that is worse on space but way better on time. In case you want another challenge :D
+
+
+    def peek(self):
+        """Arguments: none
+        Returns: Value of the node located at the top of the stack or the front of the queue
+        Should raise exception when called on empty stack"""
+        if self.front:
+
+            return self.front.value
+
+    #This is an example that only works with the test stuff in the dunder main
+    def adopt(pref):
+        animal = shelter.dequeue()
+        if animal.type ==pref:
+            return animal
+        else:
+            first_animal = animal
+            #This looks for the first cat INSTANCE or that node in particular.
+            while True:
+                shelter.enqueue(animal)
+                animal = shelter.dequeue()
+                if animal.type == pref:
+                    return animal
+                    # Would want to keep enqueing until first animal is front again.
+                elif animal == first_animal:
+                    shelter.enqueue(first_animal)
+                    break
+
+            return None
+
+
+
+# Remember dunder strs? This will make it so that if you return the object, it will come in with the str aka pass that test bug where you return the object!
 class Dog:
     def __init__(self, value=None, next=None):
         self.value = "dog"
         self.next = next
+
+    def __str__(self):
+        return f"{self.value}"
 
 
 class Cat:
     def __init__(self, value=None, next=None):
         self.value = "cat"
         self.next = next
+
+    def __str__(self):
+        return f"{self.value}"
+
+class Kitten:
+    def __init__(self):
+        self.type = "cat"
+
+class Pupper:
+    def __init__(self):
+        self.type = "dog"
+
+if __name__ == "__main__":
+    # For testing the adopt bonus feature
+    shelter = AnimalShelter()
+    shelter.enqueue(Kitten())
+    shelter.enqueue(Kitten())
+    shelter.enqueue(Pupper())
+    print(shelter)
+
+    adopted = adopt("Cat")
+    print(adopted)
+
