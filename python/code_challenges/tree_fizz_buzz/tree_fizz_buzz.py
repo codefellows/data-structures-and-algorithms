@@ -1,28 +1,29 @@
+from copy import deepcopy
 from .kary_tree import KaryTree, Node
+import copy
 #The issue is that python saves things with equals as new references.
 
 
-def fizz_buzz_trees(kary1):
-    kary2 = KaryTree()
+def fizz_buzz_tree(kary1):
+    """We are cloning the original tree and then traversing it rewriting its values with the fizzbuzz function."""
+    kary2 = copy.deepcopy(kary1)
+    # We start with cloning the tree, and do a preorder traversal passing the values through and modifying them in place for kary2
 
     def traversing(root):
         if root == None:
             return
+
+        root.value = fizz_buzz(root.value)
         print(root.value)
-
-        kary2.root = Node(fizz_buzz(root.value))
-
-        # root.value = fizz_buzz(root.value)
 
         if root.children:
             for child in root.children:
                 traversing(child)
 
 
-    traversing(kary1.root)
+    traversing(kary2.root)
 
     # print(kary1.breadth_first())
-    # print(kary2.breadth_first())
     # print(kary1, kary2)
     return kary2
 
