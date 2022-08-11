@@ -166,6 +166,8 @@ According to [Geeks for Geeks](https://www.geeksforgeeks.org/quick-sort-vs-merge
 
 # Resources
 
+While loops need parenthesis for multiple conditions as we can see [here](https://initialcommit.com/blog/python-while-loop-multiple-conditions)
+
 See the code for the [Merge Sort](sorting/merge/merge_code.py) or the [Merge Sort Tests](sorting/merge/test_merge_code.py) by clicking on the highlighted words!
 
 For more on markdown codeblock formatting, look [here](https://stackoverflow.com/questions/15721373/how-do-i-ensure-that-whitespace-is-preserved-in-markdown#:~:text=Use%20instead%20of%20space%20characters.)

@@ -3,11 +3,16 @@ from .merge_code import merge_sort
 def test_function_exists():
     assert merge_sort
 
-
 def test_regular():
     test_array = [8,4,23,42,16,15]
     result_array =  merge_sort(test_array)
     expected = [4,8,15,16,23,42]
+    assert result_array == expected
+
+def test_regular_odd():
+    test_array = [8,4,23,42,16,15,100]
+    result_array =  merge_sort(test_array)
+    expected = [4,8,15,16,23,42,100]
     assert result_array == expected
 
 def test_reversed():
@@ -33,4 +38,9 @@ def test_empty():
     result_array =  merge_sort(test_array)
     expected = []
     assert result_array == expected
-    
+
+def test_one():
+    test_array = [9]
+    result_array =  merge_sort(test_array)
+    expected = [9]
+    assert result_array == expected
