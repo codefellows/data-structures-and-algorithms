@@ -18,6 +18,10 @@
 - [Max Binary Trees](/code_challenges/tree_max/README.md)
 - [Breadth First Search Trees](/code_challenges/breadth_first/README.md)
 - [Kary Trees](/code_challenges/tree_fizz_buzz/README.md)
+- [Insertion Sort](/sorting/insertion/README.md)
+- [Merge Sort](/sorting/merge/README.md)
+- [Quick Sort](/sorting/quick/README.md)
+- [Linked List and Binary Search Maximum Values](/code_challenges/lll_bst_class_28/Two_Blogs.md)
 
 ### Folder and Challenge Setup
 

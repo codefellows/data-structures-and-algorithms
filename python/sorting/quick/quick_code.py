@@ -21,7 +21,7 @@ def actual_sort(test_array,left,right):
     #This is the sorted version since things are sorted in place.
 
 def swap(starter_array, left_index,right_index):
-    # I want to pivot index to be the left index. This will need to be reversed
+    """This should be moving the elements less than the pivot element to the left in the array, leaving the greater items in the right, and returning the position of the pivot."""
     pivot_index = starter_array[left_index]
     temp_index = left_index+1
     for i in range ((left_index+1),right_index):
