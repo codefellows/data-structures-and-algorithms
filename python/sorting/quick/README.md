@@ -20,13 +20,13 @@ Say we were given the following regular array with numbers in the subsequent pos
 [8,4,23,42,16,15]
 ```
 
-Here, the first number, 8 is our pivot, so we sort based on whether the numbers are higher or lower than 8.
+Here, the first number, 8 is our pivot, so we sort based on whether the numbers are higher or lower than 8. We need to keep track of where the pivot point went because the pivot is the only item that we are sure is in the right position. Now er know where to split our array.
 
 ```
 [4,8,23,42,16,15]
 ```
 
-Great, now our new pivot is the first number in the back half which is 23. Our new sorted array is:
+ Great, now our new pivot is the first number in the back half which is 23. Our new sorted array is:
 
 ```
 [4,8,16,15,23,42]
@@ -117,7 +117,17 @@ We go through the array use the pivots for array indexes 1(2),2(3),3(4) and 4(7)
  1 2 3 4  5  6
  ```
 
-# Resources
+## Conclusion
+
+This works best with a random, relatively small, and evenly distributed set of numbers. This works in O(n log n) time.
+
+## Resources
+
+Here are two resources with pseudo code or code in Python and C++ that this code is based on.
+
+One explanation of quicksort with a great visual can be found [here](https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/)
+
+See another example of quicksort implementation and the basis for this code [here](https://www.programiz.com/dsa/quick-sort)
 
 See the code for the [Quick Sort](sorting/quick/quick_code.py) or the [Quick Sort Tests](sorting/quick/test_quick_code.py) by clicking on the highlighted words!
 

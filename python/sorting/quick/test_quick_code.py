@@ -9,6 +9,12 @@ def test_regular():
     expected = [4,8,15,16,23,42]
     assert result_array == expected
 
+def test_regular_odd():
+    test_array = [8,4,23,42,16,15,100]
+    result_array =  merge_sort(test_array)
+    expected = [4,8,15,16,23,42,100]
+    assert result_array == expected
+
 def test_reversed():
     test_array = [20,18,12,8,5,-2]
     result_array =  quick_sort(test_array)
