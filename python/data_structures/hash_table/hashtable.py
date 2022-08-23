@@ -1,3 +1,6 @@
+from operator import contains
+
+
 class Hashtable:
     """
     Several functions that can be used for a Hashtable implementation. The Key refers to the string that you would like to add to the hash table.
@@ -43,33 +46,49 @@ class Hashtable:
             return
 
         key = str(key)
+        #print(key)
 
         index = self.hash(key)
+        #print(index)
 
         linked = LinkedList()
 
         if self._buckets[index] is None:
-            linked.insert(value)
+            linked.insert([key,value])
+            self._buckets[index] = linked.head
+            #print(self._buckets[index])
             # The insert function handles making the new value the head if a value is there and adding a value if nothing is there.
 
+        # This needs to handle collisions
+        # This needs to handle multiple keys.
+        # This makes no sense - if you are storing the keys why would there be collisions? Could multiple keys and multiple values exist at the same index/ stored as the linkedlist value?
 
     def get(self,key):
         """Returns the head of anything at this value in the linked list. """
         """Arguments: key
         Returns: Value associated with that key in the table"""
         index = self.hash(key)
-        value = self._buckets[index]
+        value = self._buckets[index].value[1]
+        # The second value is there because otherwise you would just return the hashtable/linked list object
         return value
 
     def contains(self,key):
         """Argument: Key
-        Returns: Boolean, indicating if anything is in the bucket/ key exists in the hash table already."""
+        Objective Return Statement: Boolean, indicating if anything is in the bucket/ key exists in the hash table already.
+        Actual Return Statement: Since I am not sure how to unhash something to make sure that specific thing is already used as a key, we are going to return True if there is already a value at this index. Ie. if two keys lead to the same hash value and one of them has a value in the table, this will still come back as True."""
         # Is there anything at this index? Is it the key sent in? If not is the next thing that value?
+        # This also would mean traversing the linkedlist if you are saving things as key/value pairs
 
     def keys(self,key):
         """Argument: key
         returns: Collection of keys at all indices, aka the whole hash table.Return all of the keys where the value is not none. It is an index before any value is assigned, a key when a value is assigned."""
+        list_of_keys = []
 
+        for index in self._buckets:
+            if index is not None:
+                # How would we traverse this?
+                list_of_keys.append(self._buckets[index].value[0])
+                # How would we append something that is being returned as printed (from the traverse function in the linked list)
 
 
 
@@ -140,10 +159,6 @@ class LinkedList():
         # None is the Null of python - you can update the test to match.
         # returned_string.strip('\'')
         return returned_string
-
-
-
-
 
 
 

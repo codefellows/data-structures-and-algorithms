@@ -13,7 +13,7 @@ def test_hash():
     actual = 5
     assert actual != expected
 
-@pytest.mark.skip("TODO")
+#@pytest.mark.skip("TODO")
 def test_get_apple():
     hashtable = Hashtable()
     hashtable.set("apple", "Used for apple sauce")
