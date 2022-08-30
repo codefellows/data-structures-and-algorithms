@@ -23,7 +23,8 @@
 - [Quick Sort](/sorting/quick/README.md)
 - [Linked List and Binary Search Maximum Values](/code_challenges/lll_bst_class_28/Two_Blogs.md)
 - [Hash Table Implementation](/data_structures/hash_table/README.md)
-- [Hash Table - Repeated Word](code_challenges/hashmap_repeated_word/README.md)
+- [Hash Table - Repeated Word](/code_challenges/hashmap_repeated_word/README.md)
+- [Hash Table - Tree Intersection](/code_challenges/tree_intersection/README.md)
 
 ### Folder and Challenge Setup
 

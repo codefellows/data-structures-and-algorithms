@@ -1,3 +1,4 @@
+
 def first_repeated_word(passage):
 
     if type(passage)!= str:
