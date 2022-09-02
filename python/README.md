@@ -17,7 +17,7 @@
 - [Binary Trees](/data_structures/binary_tree/README.md)
 - [Max Binary Trees](/code_challenges/tree_max/README.md)
 - [Breadth First Search Trees](/code_challenges/breadth_first/README.md)
-- [Kary Trees](/code_challenges/tree_fizz_buzz/README.md)
+- [K-ary Trees](/code_challenges/tree_fizz_buzz/README.md)
 - [Insertion Sort](/sorting/insertion/README.md)
 - [Merge Sort](/sorting/merge/README.md)
 - [Quick Sort](/sorting/quick/README.md)
@@ -25,6 +25,7 @@
 - [Hash Table Implementation](/data_structures/hash_table/README.md)
 - [Hash Table - Repeated Word](/code_challenges/hashmap_repeated_word/README.md)
 - [Hash Table - Tree Intersection](/code_challenges/tree_intersection/README.md)
+- [Hash Table - Left Join](/code_challenges/hashmap_left_join/README.md)
 
 ### Folder and Challenge Setup
 
