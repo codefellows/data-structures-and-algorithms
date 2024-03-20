@@ -1,5 +1,5 @@
 attrs==21.4.0
-black==22.1.0
+black==24.3.0
 click==8.0.4
 colorama==0.4.4
 docopt==0.6.2
