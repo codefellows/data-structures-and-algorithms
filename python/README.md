@@ -8,7 +8,8 @@ Each type of code challenge has slightly different instructions. Please refer to
 
 ### Data Structure: New Implementation
 
-- Create a new folder under the `python` level, with the name of the data structure and complete your implementation there
+- Find the data-structure file under the `python/data_structures` level with the name of the data structure and complete your implementation there
+- If there is not a file there already for the specified data-structure, then create a new file under the `python/data_structures` level, with the name of the data structure and complete your implementation there
   - i.e. `linked_list`
 - Implementation (the data structure "class")
   - The implementation of the data structure should match package name
@@ -25,8 +26,8 @@ Each type of code challenge has slightly different instructions. Please refer to
     ```
 
 - Tests
-  - Within folder `tests` create a test file called `test_[data_structure].py`
-    - i.e. `tests/test_linked_list.py`
+  - Within folder `tests/code_challenges` or `tests/data_structures` find a test file called `test_[data_structure].py`
+    - i.e. `tests/data_structures/test_linked_list.py`
     - Your tests will then need to require the data structure you're testing
       - i.e. `from linked_list.linked_list import LinkedList`
 
@@ -45,7 +46,8 @@ Each type of code challenge has slightly different instructions. Please refer to
 Code challenges should be completed within a folder named `code_challenges` under the `python` level
 
 - Daily Setup:
-  - Create a new folder under the `python` level, with the name of the code challenge
+  - Find the file under the `python/code_challenges` level, with the name of the code challenge
+  - If the file does not exist, create a new file under the `python/code_challenges` level, with the name of the code challenge
     - Each code challenge assignment identifies the branch name to use, for example 'find-maximum-value'
     - For clarity, create your folder with the same name, ensuring that it's `snake_cased`
     - i.e. For a challenge named 'find_maximum_value', create the folder:`code_challenges/find_maximum_value`
